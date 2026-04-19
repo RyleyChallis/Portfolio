@@ -1,0 +1,259 @@
+nav {
+    position: absolute;
+    background-color: transparent;
+    min-height: 14vh;
+
+    padding: 20px 40px;
+    margin: 0 auto;
+    justify-content: center;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav .logo {
+    font-size: 2.3rem;
+    font-family: 'fraunces', serif;
+    font-weight: bold;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 1.1rem;
+    font-family: 'inter', sans-serif;
+    padding: 10px;
+    border-radius: 7px;
+    position: relative;
+}
+
+.nav-links a:hover {
+    width: 100%;
+}
+
+.nav-links a:not(.cta, .cta-two)::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 0;
+    top: 40px;
+    left: 0;
+    height: 3px;
+
+    background-color: var(--main-yellow);
+    filter: brightness(90%);
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links-first {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+.nav-links-second {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: 60px;
+}
+
+.nav-links-second .cta {
+    background-color: var(--main-yellow);
+    color: var(--text-main);
+    padding: 16px 24px;
+    border: 1.8px solid var(--text-main);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.nav-links-second .cta:hover {
+    background-color: var(--main-yellow);
+    border-bottom: 5px solid var(--text-main);
+}
+
+.nav-links-second .cta-two, .popup-buttons .cta-two, .openbtn {
+    background-color: transparent;
+    color: var(--text-main);
+    padding: 16px 24px;
+    border: 1.8px solid var(--text-main);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.1s ease;
+}
+
+.cta-two:hover, .openbtn:hover {
+    border-bottom: 5px solid var(--text-main);
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    background-color: var(--main-white);
+    border-left: 3px solid var(--text-main);
+    overflow-x: hidden;
+    transition: all 0.6s;
+    padding: 60px 0 30px 0;
+}
+
+.sidebar-links {
+    flex-grow: 1;
+}
+
+.sidebar-links a:nth-child(5) {
+    margin-bottom: 75px;
+}
+
+.sidebar-links h3 {
+    color: var(--text-main);
+    padding: 20px 8px 0 32px;
+    margin: 0;
+    font-family: 'fraunces', serif;
+    font-size: 1.2rem;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    display: block;
+    transition: 0.3s;
+    font-family: 'inter', sans-serif;
+}
+
+.sidebar a:hover {
+    color: var(--main-yellow);
+    padding-left: 40px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 45px;
+}
+
+.openbtn {
+    font-size: 26px;
+    cursor: pointer;
+
+    background-color: var(--main-white);
+    border: 1.8px solid var(--text-main);
+    padding: 8px 18px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-top: 75px;
+    padding: 0 40px;
+}
+
+.footer-logo {
+    font-family: 'fraunces', serif; /* Matching your main logo */
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    color: var(--main-yellow); /* Your signature yellow dot */
+}
+
+.sidebar-footer p {
+    font-family: 'inter', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1500;
+}
+
+.dropdown-btn {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'inter', sans-serif;
+    transition: 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: var(--off-white);
+    padding-left: 20px;
+}
+
+.dropdown-content a:hover {
+    filter: brightness(90%) !important;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.arrow {
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.dropdown-btn.active .arrow {
+    transform: rotate(90deg);
+    display: inline-block;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryley Challis | Building Premium Online Experiences for Sussex Businesses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/query.css">
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+    <div class="sidebar-links">
+        <h3>Navigation</h3>
+            <a href="#">Home</a>
+            <a href="index.html#packages">Pricing</a>
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    Projects <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                </button>
+                <div id="sidebarDropdown" class="dropdown-content">
+                    <a href="projects.html#tipsy">Tipsy Kisses</a>
+                    <a href="projects.html#elate">Elate</a>
+                    <a href="projects.html">See All Projects</a>
+                </div>
+            </div>
+            <a href="index.html#about">About</a>
+            
+        <h3>Legal</h3>
+            <a href="legal.html#privacy">Privacy Policy</a>
+            <a href="legal.html#cookies">Cookie Policy</a>
+            <a href="legal.html#terms">Terms & Conditions</a>
+            
+            <div class="sidebar-footer">
+                <div class="footer-logo">RC<span>.</span></div>
+                <p>&copy; 2026 Ryley Challis</p>
+            </div>
+        </div>
+        </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <nav class="navbar">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <a class="logo" href="#">RC<span>.</span></a>
+        <div class="nav-links">
+            <ul class="nav-links-first">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <ul class="nav-links-second">
+                <li><a class="cta" href="#contact">Start a Conversation</a></li>
+                <li><a class="cta-two" href="#projects">Projects</a></li>
+                <li><button id="sidebarOverlay" class="overlay" onclick="closeNav()"></button></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header class="header">
+        <div class="header-content">
+            <p class="subtitle">Crafting stunning, high-performance digital solutions across Brighton, Lewes, and the wider Sussex area.</p>
+            <h1>Hand-Picked Projects: Turning Sussex Visions into Digital Reality</h1>
+            <p>My philosophy is simple: results over fluff. Below is a selection of my recent work, where I partner with local, ambitious brands to create fast, bespoke websites that capture their unique identity and—most importantly—drive real business growth. Dive in and see what we can build.</p>
+            <a href="#contact" class="btn-primary" target="_blank">Start a Conversation</a>
+        </div>
+    </header>
+
+    <section class="gallery" id="gallery">
+        <h2>Case Studies & Recent Work</h2>
+        <p>Every project in this gallery represents a unique collaboration aimed at solving a specific business challenge. I don't believe in one-size-fits-all solutions; instead, I focus on the intersection of clean aesthetics and functional performance. From custom photography and optimized code to seamless user journeys, these sites are built to turn local visitors into lifelong customers.</p>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="css/img/tipsy.png" alt="Portfolio Item 1">
+            </div>
+        </div>
+    </section>
+    <script src="css/script.js"></script>
+</body>
+</html>

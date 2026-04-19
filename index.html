@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryley Challis | Building Premium Online Experiences for Sussex Businesses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/query.css">
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+    <div class="sidebar-links">
+        <h3>Navigation</h3>
+            <a href="#">Home</a>
+            <a href="index.html#packages">Pricing</a>
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    Projects <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                </button>
+                <div id="sidebarDropdown" class="dropdown-content">
+                    <a href="projects.html#tipsy">Tipsy Kisses</a>
+                    <a href="projects.html#elate">Elate</a>
+                    <a href="projects.html">See All Projects</a>
+                </div>
+            </div>
+            <a href="index.html#about">About</a>
+            
+        <h3>Legal</h3>
+            <a href="legal.html#privacy">Privacy Policy</a>
+            <a href="legal.html#cookies">Cookie Policy</a>
+            <a href="legal.html#terms">Terms & Conditions</a>
+            
+            <div class="sidebar-footer">
+                <div class="footer-logo">RC<span>.</span></div>
+                <p>&copy; 2026 Ryley Challis</p>
+            </div>
+        </div>
+        </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <nav class="navbar">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <a class="logo" href="#">RC<span>.</span></a>
+        <div class="nav-links">
+            <ul class="nav-links-first">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <ul class="nav-links-second">
+                <li><a class="cta" href="#contact">Start a Conversation</a></li>
+                <li><a class="cta-two" href="#projects">Projects</a></li>
+                <li><button id="sidebarOverlay" class="overlay" onclick="closeNav()"></button></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header class="header">
+        <div class="header-content">
+            <p class="subtitle">The best web developer in East Sussex</p>
+            <h1>Building Premium Online Experiences for Sussex Businesses</h1>
+            <p>I'm Ryley, a professional web developer, and I specialise in crafting stunning websites that captivate your audience and drive business growth. With a focus on quality and innovation, we create digital experiences that leave a lasting impression.</p>
+            <a href="#contact" class="btn-primary" target="_blank">Start a Conversation</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="packages" id="packages">
+            <h2>What I Offer</h2>
+            <div class="package-container">
+                <div class="package-card">
+                    <span class="number">Basic</span>
+                    <h3>Starter Pack (1-2 Pages)</h3>
+                    <ul>
+                        <li>E.g., Home + simple Contact/Gallery page.</li>
+                        <li><span>Features:</span> Responsiveness, basic SEO (meta tags), and a contact form.</li>
+                        <li><span>Price Range:</span> £400-£650</li>
+                    </ul>
+                    <button onclick="openPopup()" class="btn-primary" href="mailto:ryleychallis@outlook.com">Start Project</button>
+                </div>
+                <div class="package-card">
+                    <span class="number">Popular</span>
+                    <h3>Business Suite (3-5 Pages)</h3>
+                    <ul>
+                        <li>E.g., Home, About, Services, Blog/FAQ, Contact</li>
+                        <li><span>Features:</span> Google Maps Integration & Local SEO, and Analytics setup</li>
+                        <li><span>Price Range:</span> £700-£900</li>
+                    </ul>
+                    <button onclick="openPopup()" class="btn-primary" href="mailto:ryleychallis@outlook.com">Start Project</button>
+                </div>
+                <div class="package-card">
+                    <span class="number">Expert</span>
+                    <h3>Bespoke Suite (6-10 pages)</h3>
+                    <ul>
+                        <li>E.g., Complete Brand Site + Product Showcase, Portfolio, or Service Hub.</li>
+                        <li><span>Features:</span> Custom Layout Design, Advanced Image Optimization, and Multi-Step Contact Flow</li>
+                        <li><span>Price Range:</span> £950-£1,500+</li>
+                    </ul>
+                    <button onclick="openPopup()" class="btn-primary" href="mailto:ryleychallis@outlook.com">Start Project</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="process" id="process">
+            <h2>How do I Work?</h2>
+            <div class="process-container">
+                <div class="process-card">
+                    <h3>
+                        <span>Step 01: Strategy & Prep</span>
+                    </h3>
+                    <p>We discuss your goals, target audience and brand vibe to ensure the site actually grows your business.</p>
+                </div>
+                <div class="process-card">
+                    <h3>
+                        <span>Step 02: Build & Refine</span>
+                    </h3>
+                    <p>I develop your site using clean, modern code with regular updates so you can see the progress in real-time.</p>
+                </div>
+                <div class="process-card">
+                    <h3>
+                        <span>Step 03: Launch & Support</span>
+                    </h3>
+                    <p>Once you're 100% happy with the design, we go live. Once we’re live, I provide a handover pack and 30 days of free support for any small text or image updates you need.</p>
+                </div>
+                <a class="btn-primary" href="mailto:ryleychallis@outlook.com" target="_blank">See If I'm A Fit</a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>Meet Your Developer</h2>
+            <div class="about-container">
+                <div class="about-info">
+                    <h3>Get To Know Me</h3>
+                    <p>Hi, I'm Ryley. I specialise in building high-performance, hand-coded websites for small Sussex businesses. I believe a website should be more than just a digital business card—it should be a high-performance tool that works for you.</p>
+                    <p>Unlike many who rely on clunky site builders, I write every line of code myself to ensure your site isn't just beautiful, but lightning-fast, secure, and uniquely yours.</p>
+                    <p>My goal is to take the technical weight off your shoulders. From our first strategy session to the final launch, I focus on creating a digital presence that reflects the quality of your brand and provides a seamless experience for your customers.</p>
+                </div>
+                <div class="about-image">
+                    <img src="css/img/about.jpg" alt="Clean Desk Setup">
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-container">
+                <h2>Common Questions</h2>
+
+                <div class="faq-card">
+                    <button class="faq-question">How long does a typical project take?</button>
+                    <div class="faq-answer">
+                        <p>Most sites are completed within 2 to 4 weeks. This includes our initial strategy session, the build phase, and final refinements. I'll declare any additional time I may need before we reach the deadline.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">Do I own my website once it's finished?</button>
+                    <div class="faq-answer">
+                        <p>100% yes. You own the code and all assets once the final payment is cleared. No hidden subscription fees.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <button class="faq-question">Are there any hidden or recurring costs?</button>
+                    <div class="faq-answer">
+                        <p>None from my side. The price we agree on is for the complete build. You will only need to cover your own domain and hosting (usually around £10-15/month), which I will help you set up so you have full control over the billing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">What do I need to provide before we start?</button>
+                    <div class="faq-answer">
+                        <p>To keep the project on track, I’ll need your branding (logo/colors), any images you'd like me to use, and the text for your pages. If you don't have photos, I can source high-quality, professional imagery that fits your brand's aesthetic.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">Will my website show up on Google?</button>
+                    <div class="faq-answer">
+                        <p>Yes. Because I hand-code your site with clean HTML, it is naturally much faster and easier for Google to read than a template-based site. I include essential SEO setup as standard to ensure you're visible from day one.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="intro">
+                    <h2>RC<span>.</span></h2>
+                    <p>Bespoke web development for Sussex businesses and beyond. I specialize in hand-coded solutions that cut out the bloat of traditional site builders, focusing on speed, performance, and modern design.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#packages">Packages</a></li>
+                            <li><a href="#process">Process</a></li>
+                            <li><a href="#about">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="legal.html#privacy">Privacy Policy</a></li>
+                            <li><a href="legal.html#cookies">Cookie Policy</a></li>
+                            <li><a href="legal.html#terms">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ryley Challis</p>
+                <p>All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <div id="project-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h3>Project Start-Up</h3>
+            <p><span>Please note:</span> To secure your slot, a <strong>50% non-refundable booking deposit</strong> is required before work commences.</p>
+            
+            <div class="popup-buttons">
+                <button onclick="closePopup()" class="cta-two">Cancel</button>
+            
+            <a href="mailto:ryleychallis@outlook.com?subject=New Project Inquiry&body=Hello!%20%0D%0A%0D%0AI'm%20ready%20to%20move%20forward%20with%20the%20website%20project.%20I%20understand%20the%2050%25%20deposit%20policy.%20%0D%0A%0D%0ATo%20get%20things%20started,%20here%20is%20a%20bit%20more%20info:%20%0D%0A%0D%0A1.%20What%20is%20the%20business%20name?%20%0D%0A2.%20What%20is%20the%20main%20goal%20of%20the%20site?%20%0D%0A3.%20Do%20you%20have%20a%20deadline%20in%20mind?%20%0D%0A%0D%0AOnce%20you%20send%20the%20Stripe%20invoice,%20I'll%20get%20that%20cleared.%20Thanks!" target="_blank" class="btn-primary">
+                I Understand - Proceed
+            </a>
+            </div>
+        </div>
+        </div>
+    <script src="css/script.js"></script>
+</body>
+</html>
