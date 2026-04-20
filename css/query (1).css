@@ -1,0 +1,5 @@
+@media (max-width: 1092px) {
+    body main.main-page header .header-content h1 {
+        color: red !important;
+    }
+}

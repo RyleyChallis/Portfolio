@@ -1,5 +1,177 @@
-@media (max-width: 768px) {
+@media (max-width: 1411px) {
+    .package-container .package-card {
+        min-height: 550px !important;
+    }
+}
+
+@media (max-width: 1323px) {
+    .package-container {
+        max-width: 90% !important;
+    }
+    .package-container .package-card:nth-child(odd) {
+        transform: scale(0.95);
+    }
+    .package-container .package-card h3 {
+        font-size: 1.4rem !important;
+        max-width: 80% !important;
+    }
+    .package-container .package-card li {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 1078px) {
     header h1 {
-        font-size: 3.3rem;
+        font-size: 3.1rem;
+        max-width: 90% !important;
+    }
+    .nav-links-first {
+        display: none;
+    }
+    .package-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 80% !important;
+        gap: 20px !important;
+    }
+    .package-container .package-card {
+        max-width: 420px !important;
+        min-height: 480px !important;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .package-card h3 {
+        margin-top: 30px;
+    }
+    .package-container div.package-card:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        transform: none !important;
+        margin: 0 !important;
+        width: 100% !important; 
+        max-width: 420px !important; 
+        scale: 0.95 !important;
+    }
+    .package-card:last-child {
+        display: grid;
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 420px;
+    }
+    .package-container .package-card li {
+        font-size: 0.9rem !important;
+    }
+    .package-card .btn-primary {
+        width: 100%;
+        margin-top: auto;
+    }
+    #about div.about-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .about-image img {
+        max-height: 480px !important;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+    p {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 0.8rem !important;
+    }
+    body header.header h1 {
+        font-size: 2.4rem;
+    }
+    nav .cta {
+        padding: 10px 16px !important;
+    }
+    .nav-links-second {
+        gap: 10px !important;
+    }
+    .cta-two {
+        display: none;
+    }
+    .openbtn {
+        padding: 6px 12px;
+    }
+    .header p {
+        font-size: 0.9rem;
+    }
+    .package-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .faq-section div.faq-card .faq-question {
+        font-size: 1.1rem !important;
+        max-width: none;
+    }
+    .faq-question::after {
+        margin-left: 50px;
+    }
+    .faq-card.active {
+        margin-bottom: 50px;
+    }
+    .popup-content {
+        max-width: 90%;
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 710px) {
+    .faq-answer {
+        max-width: 95% !important;
+    }
+    footer.footer .container .footer-container {
+        max-width: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width: 526px) {
+    nav .cta {
+        display: none;
+    }
+    .openbtn {
+        padding: 8px 12px !important;
+        font-size: 20px;
+    }
+    body header.header h1 {
+        font-size: 2.1rem;
+    }
+    .popup-content h3 {
+        font-size: 2rem;
+    }
+    footer.footer .intro {
+        max-width: 80%;
+    }
+    footer.footer .container .footer-container .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-links h3 {
+        font-size: 1.1rem;
+    }
+    .footer-links li a {
+        font-size: 0.8rem !important;
+    }
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        gap: 0 !important;
+    }
+    .footer-bottom p:nth-child(2) {
+        margin-top: -5px !important;
+    }
+    .sidebar {
+        max-width: 80% !important;
     }
 }

@@ -5,10 +5,10 @@ nav {
 
     padding: 20px 40px;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: center !important;
 
     display: flex;
-    align-items: center;
+    align-items: center !important;
     width: 100%;
 }
 
@@ -75,6 +75,7 @@ nav .logo {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.2s ease;
+    margin: 0 !important;
 }
 .nav-links-second .cta:hover {
     background-color: var(--main-yellow);
@@ -159,7 +160,7 @@ nav .logo {
     border: 1.8px solid var(--text-main);
     padding: 8px 18px;
     position: fixed;
-    top: 20px;
+    top: 30px;
     right: 20px;
     z-index: 1000;
     border-radius: 5px;
@@ -225,6 +226,10 @@ nav .logo {
     display: none;
     background-color: var(--off-white);
     padding-left: 20px;
+}
+
+.dropdown-content a {
+    font-style: italic;
 }
 
 .dropdown-content a:hover {
