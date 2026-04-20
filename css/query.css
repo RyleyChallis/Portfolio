@@ -155,6 +155,13 @@
     header.header .subtitle {
         font-size: 0.8rem !important;
     }
+    header.header p.desktop-only {
+        display: none;
+    }
+
+    p.mobile-only {
+        display: flex;
+    }
     .package-container .package-card h3 {
         font-size: 1.6rem !important;
     }

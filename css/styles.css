@@ -87,6 +87,10 @@ header p {
     line-height: 1.4;
 }
 
+.mobile-only {
+    display: none;
+}
+
 #packages {
     display: flex;
     flex-direction: column;
