@@ -81,7 +81,7 @@
 }
 
 @media (max-width: 768px) {
-    p {
+    html body p {
         font-size: 1rem !important;
     }
     body header.header h1 {
