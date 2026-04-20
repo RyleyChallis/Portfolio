@@ -134,7 +134,7 @@
 }
 
 @media (max-width: 526px) {
-    html body p, ul li {
+    html body p, ul li, .btn-primary {
         font-size: 1rem !important;
     }
     h2 {
@@ -198,6 +198,9 @@
         text-align: center;
         margin: 0 auto;
         gap: 0 !important;
+    }
+    .footer-bottom p {
+        font-size: 0.8rem !important;
     }
     .footer-bottom p:nth-child(2) {
         margin-top: -5px !important;
