@@ -24,6 +24,24 @@ nav .btn-primary:hover {
     margin-top: auto;
 }
 
+.btn-secondary {
+    background: transparent;
+    color: var(--text-main);
+    font-size: 20px;
+
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary i {
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    color: var(--main-yellow);
+    filter: brightness(90%);
+}
+
 .popup-overlay {
   display: none; 
   position: fixed;

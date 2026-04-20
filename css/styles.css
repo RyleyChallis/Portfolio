@@ -83,6 +83,7 @@ header p {
     text-align: left;
     margin-top: 20px;
     margin-bottom: 50px;
+    line-height: 1.4;
 }
 
 #packages {
@@ -268,6 +269,7 @@ header p {
   justify-content: center;
   text-align: center;
   align-items: center;
+  margin-right: 50px;
 
   color: var(--text-main);
   transition: transform 0.3s ease;

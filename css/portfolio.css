@@ -23,7 +23,7 @@ h2 {
     color: var(--text-main);
     text-align: center;
     padding: 75px 0;
-    margin: 0;
+    margin: 0 auto !important;
 }
 
 h3 {
@@ -39,7 +39,7 @@ p {
     max-width: 750px;
 }
 
-.gallery-container {
+#tipsy .container, #elate .container, .footer-container, .container {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -47,19 +47,6 @@ p {
     justify-content: center;
     max-width: 80%;
     margin: 0 auto;
-}
-
-.gallery-container .gallery-item {
-    max-width: 450px;
-    min-height: auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 7px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    border-radius: 7px;
 }
 
 header {
@@ -96,6 +83,261 @@ header p {
     text-align: left;
     margin-top: 20px;
     margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+#gallery {
+    padding-bottom: 75px;
+    background-color: var(--off-white);
+}
+
+#gallery h2 {
+    padding-bottom: 0;
+}
+
+#gallery p {
+    text-align: center;
+    padding-bottom: 75px;
+    max-width: 950px;
+    margin: 30px auto 0 auto;
+}
+
+.gallery-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 50px;
+    justify-content: center;
+    max-width: 50%;
+    margin: 0 auto !important;
+}
+
+.gallery-container .gallery-item {
+    max-width: 550px;
+    width: 100%;
+    min-height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+    line-height: 0;
+}
+
+.gallery-item img {
+    display: block;
+    width: 550px !important;
+    height: 100% !important;
+    border-radius: 7px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-item:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.gallery-item .soon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    border-radius: 7px;
+    background-color: var(--main-white);
+    font-size: 1.4rem;
+    font-family: 'fraunces', serif;
+}
+
+.overlay {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 7px;
+    
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.overlay h3 {
+    color: var(--main-white);
+}
+
+#tipsy, #elate {
+    padding-bottom: 75px;
+}
+
+.project-image {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.project-image img {
+    max-width: 850px;
+    height: auto;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-info p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+#elate {
+    background-color: var(--off-white);
+}
+
+#final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lead {
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 75px;
+}
+
+#booking .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.field-group {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: 'Inter', sans-serif;
+    resize: vertical;
+    display: block;
+}
+
+select {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #333;
+
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: var(--main-yellow);
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 12px;
+    accent-color: var(--main-yellow);
+    transform: scale(1.2);
+}
+
+#booking-final {
+    margin: 0;
+    padding: 0;
+}
+
+.form-footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #eee; /* Light line to separate the form from the button */
+    text-align: left; /* Keeps your left-aligned theme consistent */
+}
+
+.secure-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #888;
+    text-align: center;
+    margin: 30px auto 0 auto;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #f1f10e;
+    background-color: #fff;
 }
 
 .footer {
@@ -127,8 +369,8 @@ header p {
 }
 
 .footer .intro h2, .footer .intro p {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 footer h2, footer h3, footer p {

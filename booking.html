@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryley Challis | Building Premium Online Experiences for Sussex Businesses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/query.css">
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+    <div class="sidebar-links">
+        <h3>Navigation</h3>
+            <a href="#">Home</a>
+            <a href="index.html#packages">Pricing</a>
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    Projects <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                </button>
+                <div id="sidebarDropdown" class="dropdown-content">
+                    <a href="projects.html#tipsy">Tipsy Kisses</a>
+                    <a href="projects.html#elate">Elate</a>
+                    <a href="projects.html">See All Projects</a>
+                </div>
+            </div>
+            <a href="index.html#about">About</a>
+            
+        <h3>Legal</h3>
+            <a href="legal.html#privacy">Privacy Policy</a>
+            <a href="legal.html#cookies">Cookie Policy</a>
+            <a href="legal.html#terms">Terms & Conditions</a>
+            
+            <div class="sidebar-footer">
+                <div class="footer-logo">RC<span>.</span></div>
+                <p>&copy; 2026 Ryley Challis</p>
+            </div>
+        </div>
+        </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <nav class="navbar">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <a class="logo" href="#">RC<span>.</span></a>
+        <div class="nav-links">
+            <ul class="nav-links-first">
+                <li><a href="index.html">Services</a></li>
+                <li><a href="index.html#packages">Pricing</a></li>
+            </ul>
+            <ul class="nav-links-second">
+                <li><a class="cta" href="booking.html">Start a Conversation</a></li>
+                <li><a class="cta-two active" href="portfolio.html">Portfolio</a></li>
+                <li><button id="sidebarOverlay" class="overlay" onclick="closeNav()"></button></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header class="header">
+        <div class="header-content">
+            <p class="subtitle">Crafting stunning, high-performance digital solutions across Brighton, Lewes, and the wider Sussex area.</p>
+            <h1>Let's Build Something Exceptional</h1>
+            <p>My philosophy is simple: results over fluff. Below is a selection of my recent work, where I partner with local, ambitious brands to create fast, bespoke websites that capture their unique identity and—most importantly—drive real business growth. Dive in and see what we can build.</p>
+            <a href="#contact" class="btn-primary" target="_blank">Start a Conversation</a>
+        </div>
+    </header>
+
+    <main class="booking-page">
+        <form id="booking-form">
+        <section class="vision" id="vision" style="padding-bottom: 75px;">
+            <h2 style="margin: 0; padding: 0;">The Vision & Identity</h2>
+            <div class="container">
+                <p>To build a digital presence that feels authentic, I need to understand the heart of what you do. This isn’t about picking a template; it’s about translating your brand’s "soul" into a high-performance experience.</p>
+                
+                <div class="field-group">
+                    <label for="biz-name">What is the name of your brand or project?</label>
+                    <input type="text" id="biz-name" name="name" placeholder="e.g. Brighton Botanicals" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="pitch">In a few sentences, what makes your business unique in the Sussex market?</label>
+                    <textarea id="pitch" name="vision_pitch" placeholder="Think about what your customers say they love most about you..." rows="4"></textarea>
+                </div>
+
+                <div class="field-group">
+                    <label for="vibe">If your brand were a physical space—like a boutique in the Lanes—what would the atmosphere be like?</label>
+                    <textarea id="vibe" name="vision_vibe" placeholder="e.g. Industrial & Bold, Warm & Rustic..." rows="4"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section" id="booking" style="background-color: var(--off-white);">
+            <h2 style="margin: 75px 0 0 0; padding: 75px 0 20px 0;">Project Details & Timeline</h2>
+            <p class="lead">Let’s define the scope. These details help me understand the technical requirements and the pace of the project.</p>
+            <div class="container">
+                <div class="field-group">
+                <label for="service">What are we building?</label>
+                <select id="service" name="service_type" required>
+                    <option value="" disabled selected>Select a service...</option>
+                    <option value="bespoke-portfolio">Bespoke Portfolio / Showcase</option>
+                    <option value="ecommerce">E-Commerce / Digital Shop</option>
+                    <option value="brand-refresh">Complete Brand Refresh</option>
+                    <option value="other">Something else entirely</option>
+                </select>
+                </div>
+                <div class="field-group">
+                <label for="timeline">Ideal Launch Date</label>
+                <select id="timeline" name="timeline" required>
+                    <option value="" disabled selected>Select a timeline...</option>
+                    <option value="asap">As soon as possible (Next 4 weeks)</option>
+                    <option value="1-3-months">1-3 Months</option>
+                    <option value="planning">Just planning ahead</option>
+                </select>
+                </div>
+                <div class="field-group" style="margin-top: 30px;">
+                    <label for="must-haves">Are there any specific "Must-Haves"?</label>
+                    <textarea id="must-haves" name="technical_needs" placeholder="e.g. Booking system, Instagram integration, a specific camera lens gallery..." rows="3"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section" id="booking-final">
+            <h2 style="margin: 0 !important; padding: 75px 0 20px 0 !important;">Finalize & Connect</h2>
+            <p class="lead">I personally review every inquiry to ensure we're a good fit. Expect a response within 24–48 hours to schedule your discovery call.</p>
+            
+            <div class="container">
+                <div class="field-group">
+                    <label for="client-name">Your Name</label>
+                    <input type="text" id="client-name" name="client_name" placeholder="Who am I speaking with?" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="client-email">Email Address</label>
+                    <input type="email" id="client-email" name="client_email" placeholder="hello@yourbrand.com" required>
+                </div>
+            </div>
+
+            <div class="hp-container" style="display:none;">
+                <label for="honeypot">Leave this field blank</label>
+                <input type="text" name="honeypot" id="honeypot" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" class="btn-primary submit-btn" style="display: flex; margin: 0 auto; justify-content: center;">
+                    Send Inquiry
+                </button>
+                <p class="secure-note">🔒 Your details are kept private and used only for our project communication.</p>
+            </div>
+        </section>
+        </form>
+    </main>
+    <script src="css/script.js"></script>
+</body>
+</html>

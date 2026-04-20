@@ -53,13 +53,12 @@
         <a class="logo" href="#">RC<span>.</span></a>
         <div class="nav-links">
             <ul class="nav-links-first">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="index.html">Services</a></li>
+                <li><a href="index.html#packages">Pricing</a></li>
             </ul>
             <ul class="nav-links-second">
-                <li><a class="cta" href="#contact">Start a Conversation</a></li>
-                <li><a class="cta-two" href="#projects">Projects</a></li>
+                <li><a class="cta" href="booking.html">Start a Conversation</a></li>
+                <li><a class="cta-two active" href="portfolio.html">Portfolio</a></li>
                 <li><button id="sidebarOverlay" class="overlay" onclick="closeNav()"></button></li>
             </ul>
         </div>
@@ -70,7 +69,7 @@
             <p class="subtitle">Crafting stunning, high-performance digital solutions across Brighton, Lewes, and the wider Sussex area.</p>
             <h1>Hand-Picked Projects: Turning Sussex Visions into Digital Reality</h1>
             <p>My philosophy is simple: results over fluff. Below is a selection of my recent work, where I partner with local, ambitious brands to create fast, bespoke websites that capture their unique identity and—most importantly—drive real business growth. Dive in and see what we can build.</p>
-            <a href="#contact" class="btn-primary" target="_blank">Start a Conversation</a>
+            <a href="booking.html" class="btn-primary" target="_blank">Start a Conversation</a>
         </div>
     </header>
 
@@ -78,11 +77,90 @@
         <h2>Case Studies & Recent Work</h2>
         <p>Every project in this gallery represents a unique collaboration aimed at solving a specific business challenge. I don't believe in one-size-fits-all solutions; instead, I focus on the intersection of clean aesthetics and functional performance. From custom photography and optimized code to seamless user journeys, these sites are built to turn local visitors into lifelong customers.</p>
         <div class="gallery-container">
-            <div class="gallery-item">
+            <a class="gallery-item" href="#tipsy">
                 <img src="css/img/tipsy.png" alt="Portfolio Item 1">
-            </div>
+                <div class="overlay">
+                    <h3>Jump to Section</h3>
+                </div>
+            </a>
+            <a class="gallery-item" href="#elate">
+                <img src="css/img/elate.png" alt="Portfolio Item 2">
+                <div class="overlay">
+                    <h3>Jump to Section</h3>
+                </div>
+            </a>
+            <a class="gallery-item">
+                <div class="soon">More Coming Soon</div>
+            </a>
         </div>
     </section>
+
+    <section class="tipsy" id="tipsy">
+        <h2>Tipsy Kisses — Luxury Mixology</h2>
+        <div class="container">
+            <div class="project-image">
+                <img src="css/img/tipsy.png" alt="Portfolio Item 1 - Tipsy Kisses Mobile Bar">
+            </div>
+            <div class="project-info">
+                <p>For Tipsy Kisses, the goal was to capture the sophisticated yet vibrant energy of a high-end mobile mixology service. The brand specializes in curated cocktail experiences, so the website needed to feel like a digital extension of their physical presence—polished, professional, and visually enticing. I focused on a "clean luxury" aesthetic, utilizing high-quality lifestyle photography paired with a minimalist layout to ensure the cocktails themselves remained the focal point of the user journey.</p>
+                <p>The site architecture was intentionally designed to streamline the booking process for corporate events and private parties. By implementing smooth scroll transitions and a bespoke navigation system, I ensured that potential clients could glide from viewing the drink gallery to checking package details without friction. The final result is a high-performance digital storefront that doesn’t just show off their skills, but actively converts local Sussex visitors into lifelong customers through a seamless, premium user experience.</p>
+            </div>
+            <a class="btn-secondary" href="#">View Live Site<i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="elate" id="elate">
+        <h2>Elate — Artisan Coffee Brand Identity</h2>
+        <div class="container">
+            <div class="project-image">
+                <img src="css/img/elate.png" alt="Portfolio Item 1 - Tipsy Kisses Mobile Bar">
+            </div>
+            <div class="project-info">
+                <p>For Elate, the focus was on translating the tactile, sensory experience of artisan coffee into a digital format. The brand is built on the philosophy of "elevated simplicity," so the site layout mirrors that through generous white space and a sophisticated, earth-toned color palette. I prioritised high-resolution imagery of the brewing process to evoke the aroma and craft behind every cup, creating an immediate emotional connection with coffee enthusiasts before they even visit the shop.</p>
+                <p>The technical execution centered on creating an intuitive flow that guides users from discovery to community engagement. I developed a responsive menu system that highlights their rotating single-origin beans and seasonal offerings with high clarity across all devices. By integrating a subtle, boutique-style grid layout and refined typography, the site serves as a digital destination that feels as carefully crafted as the coffee itself, reinforcing Elate's position as a premium leader in the local Sussex coffee scene.</p>
+            </div>
+            <a class="btn-secondary" href="#">View Live Site<i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="final" id="final" style="min-height: 60vh;">
+        <h2 style="font-size: 3.2rem; max-width: 650px; margin: 0; padding: 0 0 25px 0;">Ready to Make Your Mark in Sussex?</h2>
+        <a class="btn-primary" style="margin: 0; transition: all 0.3s ease;" href="booking.html">Start Your Project Now</a>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="intro">
+                    <h2>RC<span>.</span></h2>
+                    <p>Bespoke web development for Sussex businesses and beyond. I specialize in hand-coded solutions that cut out the bloat of traditional site builders, focusing on speed, performance, and modern design.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="#packages">Packages</a></li>
+                            <li><a href="#process">Process</a></li>
+                            <li><a href="#about">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="legal.html#privacy">Privacy Policy</a></li>
+                            <li><a href="legal.html#cookies">Cookie Policy</a></li>
+                            <li><a href="legal.html#terms">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ryley Challis</p>
+                <p>All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
     <script src="css/script.js"></script>
 </body>
 </html>

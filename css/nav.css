@@ -42,28 +42,15 @@ nav .logo {
     padding: 10px;
     border-radius: 7px;
     position: relative;
-}
-
-.nav-links a:hover {
-    width: 100%;
-}
-
-.nav-links a:not(.cta, .cta-two)::after {
-    display: block;
-    position: absolute;
-    content: '';
-    width: 0;
-    top: 40px;
-    left: 0;
-    height: 3px;
-
-    background-color: var(--main-yellow);
-    filter: brightness(90%);
     transition: all 0.3s ease;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.nav-links a:hover {
+    background-color: #efefef;
+}
+
+.nav-links a.active {
+    background-color: #efefef;
 }
 
 .nav-links-first {

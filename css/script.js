@@ -51,3 +51,55 @@ const faqItems = document.querySelectorAll('.faq-card');
     dropdown.classList.toggle("show");
     btn.classList.toggle("active");
 }
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxWdex5jNFpv5MCpyCMaXreI9-VIZs4QcyxVBO82aWEr1haMoqWWqflRldKXWpS_NJpPA/exec';
+const form = document.getElementById('booking-form');
+
+if (!form) {
+    console.error("CRITICAL: The browser cannot find an element with id='booking-form'");
+} else {
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        const honeypot = document.getElementById('honeypot').value;
+            if (honeypot !== "") {
+                console.warn("Bot detected.");
+                return;
+            }
+        console.log("Button clicked! Attempting to send data...");
+        
+        const submitBtn = form.querySelector('.submit-btn');
+        submitBtn.innerText = "Sending...";
+        submitBtn.disabled = true;
+
+        const formData = new FormData(form);
+        console.log("Data being sent:", Object.fromEntries(formData));
+    console.log("SENDING THESE KEYS:", Array.from(new FormData(form).keys()));
+
+        fetch(scriptURL, { method: 'POST', body: formData })
+            .then(response => {
+                console.log("Server responded!");
+                return response.text();
+            })
+            .then(text => {
+                if (text.includes("Success")) {
+                    submitBtn.innerText = "Sent! I'll be in touch.";
+                    submitBtn.style.backgroundColor = "#2ecc71";
+                    submitBtn.style.borderColor = "#2ecc71";
+
+                    form.reset(); 
+
+                    setTimeout(() => { 
+                        submitBtn.innerText = "Send Inquiry & Book Call";
+                        submitBtn.style.backgroundColor = "";
+                        submitBtn.style.borderColor = "";
+                        submitBtn.disabled = false;
+                    }, 5000);
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                submitBtn.innerText = "Error. Try again.";
+                submitBtn.disabled = false;
+            });
+    });
+}

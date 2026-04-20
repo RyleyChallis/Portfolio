@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -15,17 +16,50 @@
     <link rel="stylesheet" href="css/query.css">
 </head>
 <body>
+    <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+    <div class="sidebar-links">
+        <h3>Navigation</h3>
+            <a href="#">Home</a>
+            <a href="index.html#packages">Pricing</a>
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    Projects <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                </button>
+                <div id="sidebarDropdown" class="dropdown-content">
+                    <a href="projects.html#tipsy">Tipsy Kisses</a>
+                    <a href="projects.html#elate">Elate</a>
+                    <a href="projects.html">See All Projects</a>
+                </div>
+            </div>
+            <a href="index.html#about">About</a>
+            
+        <h3>Legal</h3>
+            <a href="legal.html#privacy">Privacy Policy</a>
+            <a href="legal.html#cookies">Cookie Policy</a>
+            <a href="legal.html#terms">Terms & Conditions</a>
+            
+            <div class="sidebar-footer">
+                <div class="footer-logo">RC<span>.</span></div>
+                <p>&copy; 2026 Ryley Challis</p>
+            </div>
+        </div>
+        </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
     <nav class="navbar">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
         <a class="logo" href="#">RC<span>.</span></a>
         <div class="nav-links">
             <ul class="nav-links-first">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
             </ul>
             <ul class="nav-links-second">
                 <li><a class="cta" href="#contact">Start a Conversation</a></li>
-                <li><a class="cta-two" href="#projects">Projects</a></li>
+                <li><a class="cta-two" href="portfolio.html">Portfolio</a></li>
+                <li><button id="sidebarOverlay" class="overlay" onclick="closeNav()"></button></li>
             </ul>
         </div>
     </nav>
@@ -93,7 +127,7 @@
                     <div class="footer-col">
                         <h3>Navigation</h3>
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
                             <li><a href="#packages">Packages</a></li>
                             <li><a href="#process">Process</a></li>
                             <li><a href="#about">About</a></li>
