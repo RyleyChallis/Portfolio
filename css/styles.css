@@ -375,6 +375,10 @@ footer h2, footer h3, footer p {
     transform: translateX(4px);
 }
 
+.footer-col li button {
+    font-weight: bold;
+}
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
