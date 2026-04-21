@@ -383,6 +383,7 @@ footer h2, footer h3, footer p {
 .footer .footer-links {
     display: flex;
     gap: 50px;
+    max-width: 90% !important;
 }
 
 .footer-col h3 {
