@@ -24,26 +24,27 @@
             <a href="#">Home</a>
             <a href="index.html#packages">Pricing</a>
             <div class="dropdown-container">
-                <button class="dropdown-btn" onclick="toggleDropdown()">
-                    Portfolio <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
-                </button>
+                <div class="dropdown-btn">
+                    <a class="odd-link" href="portfolio.html" style="text-decoration: none; color: inherit; flex-grow: 1;">Portfolio</a>
+                    
+                    <span class="arrow-trigger" onclick="toggleDropdown(event)" style="cursor: pointer; padding-left: 15px;">
+                        <i class="fa-solid fa-chevron-right dropdown-arrow"></i>
+                    </span>
+                </div>
+
                 <div id="sidebarDropdown" class="dropdown-content">
-                    <a href="portfolio.html">Tipsy Kisses</a>
-                    <a href="portfolio.html">Elate</a>
+                    <a href="portfolio.html#tipsy">Tipsy Kisses</a>
+                    <a href="portfolio.html#elate">Elate</a>
                     <a href="portfolio.html">See All Projects</a>
                 </div>
             </div>
             <a href="index.html#about">About</a>
-            
-        <h3>Legal</h3>
-            <a href="legal.html#privacy">Privacy Policy</a>
-            <a href="legal.html#cookies">Cookie Policy</a>
-            <a href="legal.html#terms">Terms & Conditions</a>
-            
-            <div class="sidebar-footer">
-                <div class="footer-logo">RC<span>.</span></div>
-                <p>&copy; 2026 Ryley Challis</p>
-            </div>
+        </div>    
+        
+    <div class="sidebar-footer">
+        <div class="footer-logo">RC<span>.</span></div>
+            <p>&copy; 2026 Ryley Challis</p>
+            <button onclick="openPopup(); closeNav()" class="btn-primary" href="#">Start Project</button>
         </div>
     </div>
 

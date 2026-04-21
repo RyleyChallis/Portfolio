@@ -50,10 +50,8 @@ function toggleDropdown(event) {
     const dropdown = document.getElementById("sidebarDropdown");
     const arrow = event.currentTarget.querySelector('i');
 
-    // Toggle the "show" class instead of changing display styles
     dropdown.classList.toggle("show");
 
-    // Handle the arrow rotation
     if (dropdown.classList.contains("show")) {
         arrow.style.transform = "rotate(90deg)";
     } else {
