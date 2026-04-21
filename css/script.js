@@ -44,12 +44,21 @@ const faqItems = document.querySelectorAll('.faq-card');
     });
 });
 
-  function toggleDropdown() {
-    const dropdown = document.getElementById("sidebarDropdown");
-    const btn = document.querySelector(".dropdown-btn");
+function toggleDropdown(event) {
+    event.stopPropagation();
     
+    const dropdown = document.getElementById("sidebarDropdown");
+    const arrow = event.currentTarget.querySelector('i');
+
+    // Toggle the "show" class instead of changing display styles
     dropdown.classList.toggle("show");
-    btn.classList.toggle("active");
+
+    // Handle the arrow rotation
+    if (dropdown.classList.contains("show")) {
+        arrow.style.transform = "rotate(90deg)";
+    } else {
+        arrow.style.transform = "rotate(0deg)";
+    }
 }
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxWdex5jNFpv5MCpyCMaXreI9-VIZs4QcyxVBO82aWEr1haMoqWWqflRldKXWpS_NJpPA/exec';

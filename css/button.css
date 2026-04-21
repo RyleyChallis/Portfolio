@@ -7,7 +7,7 @@
     text-decoration: none;
     font-family: 'inter', sans-serif;
     font-weight: 500;
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
     white-space: nowrap !important;
 }
