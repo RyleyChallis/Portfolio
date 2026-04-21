@@ -121,9 +121,6 @@
         display: block;
         margin: 0 auto;
     }
-    #mySidebar .sidebar-links .sidebar-footer {
-        padding-bottom: 175px !important;
-    }
 }
 
 @media (max-width: 992px) {
