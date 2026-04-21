@@ -187,6 +187,7 @@ nav .logo {
     right: 20px;
     z-index: 1000;
     border-radius: 5px;
+    opacity: 0.9;
 
     display: inline-flex !important;
     align-items: center !important;
