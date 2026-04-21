@@ -18,6 +18,20 @@
     .package-container .package-card li {
         font-size: 0.9rem !important;
     }
+    #gallery .gallery-container {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        justify-items: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        height: auto !important;   /* Force it to grow as long as it needs to */
+        padding-top: 50px !important; /* Manually push the first card down */
+        margin: 0 auto !important;
+        gap: 75px;
+    }
+    .gallery-item {
+        scale: 1.15;
+    }
 }
 
 @media (max-width: 1078px) {
@@ -75,8 +89,46 @@
         aspect-ratio: 16 / 9;
         object-fit: cover;
     }
+    #gallery .gallery-container {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+    }
+    .gallery-item img {
+        width: 950px !important; 
+        
+        max-width: 100% !important; 
+        
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
     p {
         font-size: 1rem !important;
+    }
+    .project-image {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .project-image img {
+        max-width: 100% !important;
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 992px) {
+    #gallery .container {
+        max-width: 80% !important;
+    }
+    #gallery p.lead {
+        max-width: 100% !important;
     }
 }
 
@@ -120,16 +172,37 @@
     .popup-content .btn-primary {
         padding: 16px 28px;
     }
-}
-
-@media (max-width: 710px) {
-    .faq-answer {
-        max-width: 95% !important;
+    #gallery .gallery-item {
+        width: 500px !important; 
     }
     footer.footer .container .footer-container {
         max-width: none !important;
         display: flex !important;
         flex-direction: column !important;
+    }
+}
+
+@media (max-width: 710px) {
+    html body h2 {
+        max-width: 550px !important;
+    }
+    p.desktop-only {
+        display: none !important;
+    }
+    p.mobile-only {
+        display: flex;
+    }
+    #gallery .mobile-only {
+        margin-bottom: 75px;
+    }
+    .faq-answer {
+        max-width: 95% !important;
+    }
+    #gallery .gallery-item {
+        width: 450px !important; 
+    }
+    #final h2 {
+        font-size: 2.8rem !important;
     }
 }
 
@@ -151,9 +224,6 @@
     body header.header h1 {
         font-size: 2.2rem;
         max-width: none !important;
-    }
-    header.header .subtitle {
-        font-size: 0.8rem !important;
     }
     header.header p.desktop-only {
         display: none;
@@ -207,5 +277,20 @@
     }
     .sidebar {
         max-width: 80% !important;
+    }
+    #gallery .gallery-item {
+        width: 350px !important; 
+    }
+    body #gallery .gallery-item div.soon {
+        font-size: 1.2rem !important;
+    }
+    h2 {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (max-width: 451px) {
+    #gallery .gallery-item {
+        width: 300px !important; 
     }
 }

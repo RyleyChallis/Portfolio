@@ -43,6 +43,9 @@ nav .logo {
     border-radius: 7px;
     position: relative;
     transition: all 0.3s ease;
+    line-height: 1 !important;
+    display: flex;
+    align-items: center !important;
 }
 
 .nav-links a:hover {
@@ -159,11 +162,14 @@ nav .logo {
     background-color: var(--main-white);
     border: 1.8px solid var(--text-main);
     padding: 8px 18px;
+    margin: 0 !important;
     position: fixed;
-    top: 30px;
     right: 20px;
     z-index: 1000;
     border-radius: 5px;
+
+    display: inline-flex !important;
+    align-items: center !important;
 }
 
 .sidebar-footer {
@@ -176,7 +182,7 @@ nav .logo {
 }
 
 .footer-logo {
-    font-family: 'fraunces', serif; /* Matching your main logo */
+    font-family: 'fraunces', serif;
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--text-main);
@@ -184,7 +190,7 @@ nav .logo {
 }
 
 .footer-logo span {
-    color: var(--main-yellow); /* Your signature yellow dot */
+    color: var(--main-yellow);
 }
 
 .sidebar-footer p {
