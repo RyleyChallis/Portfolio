@@ -159,9 +159,6 @@
     .faq-question::after {
         margin-left: 50px;
     }
-    .faq-card.active {
-        margin-bottom: 50px;
-    }
     .popup-content {
         max-width: 90%;
         min-height: 350px;
@@ -183,10 +180,10 @@
     html body h2 {
         max-width: 550px !important;
     }
-    html body .desktop-only {
+    nav .cta {
         display: none !important;
     }
-    nav .cta {
+    html body .desktop-only {
         display: none !important;
     }
     .mobile-only {
