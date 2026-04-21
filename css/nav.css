@@ -197,13 +197,9 @@ nav .logo {
     flex-direction: column;
     flex-shrink: 0 !important;
     padding: 20px 40px;
-    margin-top: 250px;
+    margin-top: 150px;
     gap: 15px;
     width: 100% !important;
-}
-
-.sidebar-footer .btn-primary {
-    margin-bottom: 75px !important;
 }
 
 .footer-logo {
