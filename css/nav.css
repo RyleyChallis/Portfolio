@@ -120,7 +120,8 @@ nav .logo {
 .sidebar-links {
     flex-grow: 1 !important;
     padding: 0 40px;
-    overflow-y: auto
+    overflow-y: auto;
+    z-index: 1000;
 }
 
 .sidebar-links a:nth-child(5) {
@@ -201,6 +202,10 @@ nav .logo {
     width: 100% !important;
 }
 
+.sidebar-footer .btn-primary {
+    margin-bottom: 75px !important;
+}
+
 .footer-logo {
     font-family: 'fraunces', serif;
     font-size: 1.8rem;
@@ -218,6 +223,7 @@ nav .logo {
     font-size: 0.8rem;
     color: #666;
     margin: 0;
+    white-space: nowrap;
 }
 
 .overlay {
