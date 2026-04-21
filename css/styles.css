@@ -86,6 +86,7 @@ header p {
     display: flex;
     flex-direction: column;
     padding-bottom: 150px;
+    background-color: var(--off-white);
 }
 
 .package-container {
@@ -148,7 +149,7 @@ header p {
 }
 
 #process {
-    background-color: var(--off-white);
+    background-color: var(--main-white);
     padding-bottom: 75px;
 }
 
