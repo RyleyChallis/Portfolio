@@ -290,9 +290,11 @@
     #gallery .gallery-item {
         width: 300px !important; 
     }
-    .footer-container {
+    html body footer.footer .container .footer-container .footer-links {
         display: flex !important;
         flex-direction: column !important;
         justify-content: center;
+        text-align: center;
+        gap: 75px;
     }
 }
