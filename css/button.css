@@ -9,6 +9,7 @@
     font-weight: 500;
     transition: all 0.1s ease;
     cursor: pointer;
+    white-space: nowrap !important;
 }
 
 nav .btn-primary:hover {
@@ -31,6 +32,7 @@ nav .btn-primary:hover {
 
     text-decoration: none;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn-secondary i {

@@ -139,9 +139,6 @@
     body header.header h1 {
         font-size: 2.4rem;
     }
-    nav .cta {
-        padding: 10px 16px !important;
-    }
     .nav-links-second {
         gap: 10px !important;
     }
@@ -186,10 +183,13 @@
     html body h2 {
         max-width: 550px !important;
     }
-    p.desktop-only {
+    html body .desktop-only {
         display: none !important;
     }
-    p.mobile-only {
+    nav .cta {
+        display: none !important;
+    }
+    .mobile-only {
         display: flex;
     }
     #gallery .mobile-only {
@@ -213,9 +213,6 @@
     h2 {
         max-width: 80%;
         margin: 0 auto;
-    }
-    nav .cta {
-        display: none;
     }
     .openbtn {
         padding: 8px 12px !important;
