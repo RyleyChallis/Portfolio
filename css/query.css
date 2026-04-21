@@ -204,13 +204,6 @@
     #final h2 {
         font-size: 2.8rem !important;
     }
-    .footer-links {
-        max-width: 90% !important;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto !important;
-        justify-content: center !important;
-    }
 }
 
 @media (max-width: 526px) {
@@ -296,5 +289,10 @@
 @media (max-width: 451px) {
     #gallery .gallery-item {
         width: 300px !important; 
+    }
+    .footer-container {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center;
     }
 }
