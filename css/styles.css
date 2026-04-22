@@ -110,7 +110,7 @@ header p {
     border-radius: 14px;
     border: 3px solid var(--text-main);
     box-shadow: 5px 10px 24px rgba(0, 0, 0, 0.2);
-    background-color: var(--main-white);
+    background-color: var(--main-white) !important;
 }
 
 .package-card:hover {
