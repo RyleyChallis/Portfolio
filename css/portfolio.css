@@ -86,6 +86,10 @@ header p {
     line-height: 1.4;
 }
 
+header .mobile-only {
+    display: none;
+}
+
 #gallery {
     padding-bottom: 75px;
     background-color: var(--off-white);
