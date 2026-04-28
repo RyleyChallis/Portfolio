@@ -175,6 +175,8 @@ nav .logo {
     top: 20px;
     right: 25px;
     font-size: 45px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }
 
 .openbtn {
