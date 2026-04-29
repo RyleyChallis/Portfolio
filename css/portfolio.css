@@ -106,6 +106,10 @@ header .mobile-only {
     margin: 30px auto 0 auto;
 }
 
+#gallery p.mobile-only {
+    display: none;
+}
+
 .gallery-container {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
@@ -139,9 +143,15 @@ header .mobile-only {
     z-index: 1;
 }
 
-.gallery-item:last-child {
-    grid-column: 1 / -1;
+.gallery-item:nth-child(odd):last-child {
+    grid-column: 1 / -2;
     justify-self: center;
+    width: 50%;
+}
+
+.gallery-item:nth-child(even):last-child {
+    grid-column: auto;
+    justify-self: start;
 }
 
 .gallery-item .soon {
