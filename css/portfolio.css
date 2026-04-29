@@ -230,13 +230,19 @@ header .mobile-only {
 
 #helix {
     background-color: var(--main-white);
+    padding-bottom: 75px;
 }
 
 #final {
+    background-color: #1E293B;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#final h2 {
+    color: var(--main-white);
 }
 
 .lead {
@@ -442,4 +448,8 @@ footer h2, footer h3, footer p {
     padding: 15px 0;
     border-top: 1px solid #424242;
     opacity: 0.4;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
 }
