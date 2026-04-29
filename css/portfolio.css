@@ -345,6 +345,7 @@ select:focus {
     color: #888;
     text-align: center;
     margin: 30px auto 0 auto;
+    padding-bottom: 75px;
 }
 
 input[type="text"],
