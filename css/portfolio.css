@@ -252,6 +252,10 @@ header .mobile-only {
     padding-bottom: 75px;
 }
 
+#booking {
+    padding-bottom: 75px;
+}
+
 #booking .container {
     display: flex;
     justify-content: flex-start;
@@ -335,8 +339,8 @@ select:focus {
 .form-footer {
     margin-top: 60px;
     padding-top: 40px;
-    border-top: 1px solid #eee; /* Light line to separate the form from the button */
-    text-align: left; /* Keeps your left-aligned theme consistent */
+    border-top: 1px solid #eee;
+    text-align: left;
 }
 
 .secure-note {
