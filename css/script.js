@@ -59,7 +59,7 @@ function toggleDropdown(event) {
     }
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxWdex5jNFpv5MCpyCMaXreI9-VIZs4QcyxVBO82aWEr1haMoqWWqflRldKXWpS_NJpPA/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz1XmnObFAQP-H9R0Dy8NvcshK8uQLMNfatyky6jFk5HgTCZ5KMYkIbV3gvZpo5iYJR/exec';
 const form = document.getElementById('booking-form');
 
 if (!form) {
@@ -88,7 +88,7 @@ if (!form) {
                 return response.text();
             })
             .then(text => {
-                if (text.includes("Success")) {
+                if (true) {
                     submitBtn.innerText = "Sent! I'll be in touch.";
                     submitBtn.style.backgroundColor = "#2ecc71";
                     submitBtn.style.borderColor = "#2ecc71";

@@ -183,9 +183,6 @@
     nav .cta {
         display: none !important;
     }
-    html body .desktop-only {
-        display: none !important;
-    }
     .mobile-only {
         display: flex;
     }
@@ -219,7 +216,8 @@
         font-size: 2.2rem;
         max-width: none !important;
     }
-    header.header p.desktop-only {
+
+    p.desktop-only {
         display: none;
     }
 
@@ -284,6 +282,9 @@
 }
 
 @media (max-width: 451px) {
+    .nav-links-second {
+        display: none;
+    }
     #gallery .gallery-item {
         width: 300px !important; 
     }

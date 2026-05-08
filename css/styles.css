@@ -86,6 +86,7 @@ header p {
     display: flex;
     flex-direction: column;
     padding-bottom: 150px;
+    scroll-margin-top: -40px;
     background-color: var(--off-white);
 }
 
