@@ -7,7 +7,7 @@ html, body {
     box-sizing: border-box;
 }
 
-header, section {
+#hero, section {
     min-height: 100vh;
     width: 100%;
 
@@ -49,7 +49,7 @@ p {
     margin: 0 auto;
 }
 
-header {
+#hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +57,7 @@ header {
     padding: 0 40px;
 }
 
-header .subtitle {
+#hero .subtitle {
     font-size: 1rem;
     font-family: 'inter', sans-serif;
     color: var(--text-main);
@@ -66,7 +66,7 @@ header .subtitle {
     margin-bottom: 1px;
 }
 
-header h1 {
+#hero h1 {
     font-size: 3.5rem;
     font-family: 'fraunces', serif;
     font-weight: bold;
@@ -75,7 +75,7 @@ header h1 {
     margin: 0;
 }
 
-header p {
+#hero p {
     font-size: 1.2rem;
     font-family: 'inter', sans-serif;
     color: var(--text-main);
@@ -86,7 +86,7 @@ header p {
     line-height: 1.4;
 }
 
-header .mobile-only {
+#hero .mobile-only {
     display: none;
 }
 
