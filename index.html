@@ -162,7 +162,11 @@
                     <p>My goal is to take the technical weight off your shoulders. From our first strategy session to the final launch, I focus on creating a digital presence that reflects the quality of your brand and provides a seamless experience for your customers.</p>
                 </div>
                 <div class="about-image">
-                    <img src="css/img/about.webp" alt="Clean Desk Setup" width="3696px" height="5544px">
+                    <picture>
+                        <source srcset="css/img/about-mobile.webp" media="(max-width: 768px)">
+                        
+                        <img src="css/img/about-mobile.webp" alt="Professional Web Development Services" class="hero-img" fetchpriority="high">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -255,6 +259,6 @@
             </div>
         </div>
     </div>
-    <script src="css/script.js"></script>
+    <script src="css/script.js" defer></script>
 </body>
 </html>
