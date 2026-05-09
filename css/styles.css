@@ -50,34 +50,6 @@ p {
     margin: 0 auto;
 }
 
-#hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 40px;
-}
-
-h1 {
-    font-size: 3.5rem;
-    font-family: 'fraunces', serif;
-    font-weight: bold;
-    color: var(--text-main);
-    max-width: 70%;
-    margin: 0;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    font-family: 'inter', sans-serif;
-    color: var(--text-main);
-    max-width: 80%;
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    line-height: 1.4;
-}
-
 .mobile-only {
     display: none;
 }

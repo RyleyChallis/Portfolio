@@ -4,6 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryley Challis | Building Premium Online Experiences for Small British Businesses</title>
+    
+    <style>
+        nav {
+            position: absolute;
+            background-color: transparent;
+            min-height: 14vh;
+
+            padding: 20px 40px;
+            margin: 0 auto;
+            justify-content: center !important;
+
+            display: flex;
+            align-items: center !important;
+            width: 100%;
+        }
+
+        nav .logo {
+            font-size: 2.3rem;
+            font-family: 'fraunces', serif;
+            font-weight: bold;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 1.1rem;
+            font-family: 'inter', sans-serif;
+            padding: 14px 16px;
+            border-radius: 50px;
+            position: relative;
+            transition: all 0.3s ease;
+            line-height: 1 !important;
+            display: flex;
+            align-items: center !important;
+        }
+
+        .nav-links a:hover {
+            background-color: #efefef;
+        }
+
+        .nav-links a.active {
+            background-color: #efefef;
+        }
+
+        .nav-links-first {
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+        }
+
+        .nav-links-second {
+            display: flex;
+            gap: 1rem;
+            margin-left: auto;
+            margin-right: 60px;
+        }
+
+        .nav-links-second .cta {
+            background-color: var(--main-yellow);
+            color: var(--text-main);
+            padding: 16px 24px;
+            border: 1.8px solid var(--text-main);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            margin: 0 !important;
+        }
+        .nav-links-second .cta:hover {
+            background-color: var(--main-yellow);
+            border-bottom: 5px solid var(--text-main);
+        }
+
+        .nav-links-second .cta-two, .popup-buttons .cta-two, .openbtn {
+            background-color: transparent;
+            color: var(--text-main);
+            padding: 16px 24px;
+            border: 1.8px solid var(--text-main);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.1s ease;
+        }
+
+        .cta-two:hover, .openbtn:hover {
+            border-bottom: 5px solid var(--text-main);
+        }
+        #hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-family: 'fraunces', serif;
+            font-weight: bold;
+            color: var(--text-main);
+            max-width: 70%;
+            margin: 0;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            font-family: 'inter', sans-serif;
+            color: var(--text-main);
+            max-width: 80%;
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            line-height: 1.4;
+        }
+    </style>
+    
     <meta name="description" content="Bespoke, hand-coded web development for Sussex businesses. High-performance digital experiences designed to elevate your brand and drive results.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +156,6 @@
 
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/query.css">
 </head>
