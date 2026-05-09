@@ -99,6 +99,7 @@ nav .logo {
 .cta-two:hover, .openbtn:hover {
     border-bottom: 5px solid var(--text-main);
 }
+
 #mySidebar {
     display: flex !important;
     flex-direction: column !important;
@@ -112,7 +113,7 @@ nav .logo {
     right: 0;
     background-color: var(--main-white);
     border-left: 3px solid var(--text-main);
-    overflow-x: hidden;
+    overflow: hidden;
     transition: all 0.6s;
     padding: 60px 0 30px 0;
 }
@@ -191,10 +192,13 @@ nav .logo {
     right: 20px;
     z-index: 1000;
     border-radius: 5px;
-    opacity: 0.7 !important;
 
     display: inline-flex !important;
     align-items: center !important;
+}
+
+.openbtn:hover {
+    background-color: #efefef;
 }
 
 .sidebar-footer {
@@ -227,7 +231,7 @@ nav .logo {
     white-space: nowrap;
 }
 
-.overlay {
+#sidebarOverlay {
     position: fixed;
     display: none;
     width: 100%;

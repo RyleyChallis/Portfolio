@@ -8,7 +8,7 @@ html, body {
     box-sizing: border-box;
 }
 
-header, section {
+#hero, section {
     min-height: 100vh;
     width: 100%;
 
@@ -377,13 +377,20 @@ footer h2, footer h3, footer p {
     transition: all 0.3s ease;
 }
 
-.footer-col li a:hover {
-    color: var(--main-yellow);
-    transform: translateX(4px);
+.footer-col button {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    color: var(--main-white);
+
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.footer-col li button {
-    font-weight: bold;
+.footer-col li a:hover, .footer-col li button:hover {
+    color: var(--main-yellow) !important;
+    transform: translateX(4px);
 }
 
 .footer-bottom {
