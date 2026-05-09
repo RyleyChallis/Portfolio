@@ -27,8 +27,7 @@ nav .logo {
     flex-direction: row;
     justify-content: space-between;
     align-items: center !important;
-    width: 100%;
-    margin: 0;
+    width: 100%;    margin: 0;
 }
 
 .nav-links li {
@@ -72,11 +71,11 @@ nav .logo {
 }
 
 .nav-links-second .cta {
+    align-items: flex-start;
     background-color: var(--main-yellow);
     color: var(--text-main);
     padding: 16px 24px;
     border: 1.8px solid var(--text-main);
-    border-bottom: 5px solid transparent;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
