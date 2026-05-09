@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/query.css">
 </head>
 <body>
+    <div id="sidebarOverlay" class="overlay" onclick="closeNav()"></div>
     <header>
         <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -58,7 +59,7 @@
         <div class="sidebar-footer">
             <div class="footer-logo">RC<span>.</span></div>
                 <p>&copy; 2026 Ryley Challis</p>
-                <button onclick="openPopup(); closeNav()" class="btn-primary" href="#">Start Project</button>
+                <a class="btn-primary" href="booking.html">Start Project</a>
             </div>
         </div>
 
@@ -71,9 +72,8 @@
                     <li><a href="#packages">Pricing</a></li>
                 </ul>
                 <ul class="nav-links-second">
-                    <li><a class="cta" href="booking.html">Start a Conversation</a></li>
+                    <li><a href="mailto:ryley.challis@outlook.com?subject=General Inquiry - Let's Work Together" class="cta" target="_blank">Start a Conversation</a></li>
                     <li><a class="cta-two desktop-only" href="portfolio.html">Portfolio</a></li>
-                    <li><button id="sidebarOverlay" class="overlay" onclick="closeNav()"></button></li>
                 </ul>
             </div>
         </nav>
@@ -90,7 +90,7 @@
             </div>
         </section>
 
-        <section class="packages" id="packages">
+        <section id="packages">
             <h2>What I Offer</h2>
             <div class="package-container">
                 <div class="package-card">
@@ -101,7 +101,7 @@
                         <li><span>Features:</span> Responsiveness, basic SEO (meta tags), and a contact form.</li>
                         <li><span>Price Range:</span> £400-£650</li>
                     </ul>
-                    <button onclick="openPopup()" class="btn-primary">Start Project</button>
+                    <a class="btn-primary" href="booking.html">Start Project</a>
                 </div>
 
                 <div class="package-card">
@@ -112,7 +112,7 @@
                         <li><span>Features:</span> Google Maps Integration & Local SEO, and Analytics setup</li>
                         <li><span>Price Range:</span> £700-£900</li>
                     </ul>
-                    <button onclick="openPopup()" class="btn-primary">Start Project</button>
+                    <a class="btn-primary" href="booking.html">Start Project</a>
                 </div>
 
                 <div class="package-card">
@@ -123,12 +123,12 @@
                         <li><span>Features:</span> Custom Layout Design, Advanced Image Optimisation, and Multi-Step Contact Flow</li>
                         <li><span>Price Range:</span> £950-£1,500+</li>
                     </ul>
-                    <button onclick="openPopup()" class="btn-primary">Start Project</button>
+                    <a class="btn-primary" href="booking.html">Start Project</a>
                 </div>
             </div>
         </section>
 
-        <section class="process" id="process">
+        <section id="process">
             <h2>How do I Work?</h2>
             <div class="process-container">
                 <div class="process-card">
@@ -153,7 +153,7 @@
             </div>
         </section>
 
-        <section class="about" id="about">
+        <section id="about">
             <h2>Meet Your Developer</h2>
             <div class="about-container">
                 <div class="about-info">
@@ -218,7 +218,7 @@
                     <div class="footer-col">
                         <h3>Navigation</h3>
                         <ul>
-                            <li><button onclick="openPopup()" style="background-color: transparent; border: none; color: var(--main-white); font-size: 0.9rem; padding-left: 0;">Start Your Project</button></li>
+                            <li><a href="booking.html">Start A Project</a></li>
                             <li><a href="portfolio.html">Portfolio</a></li>
                             <li><a href="#packages">Packages</a></li>
                             <li><a href="booking.html">Booking</a></li>

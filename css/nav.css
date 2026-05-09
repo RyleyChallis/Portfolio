@@ -26,7 +26,7 @@ nav .logo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center !important;
     width: 100%;
     margin: 0;
 }
@@ -76,6 +76,7 @@ nav .logo {
     color: var(--text-main);
     padding: 16px 24px;
     border: 1.8px solid var(--text-main);
+    border-bottom: 5px solid transparent;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
@@ -122,8 +123,8 @@ nav .logo {
 
 .sidebar-links {
     flex-grow: 1 !important;
-    padding: 0 20px;
-    margin: 0 !important;
+    padding: 0 20px 0 32px;
+    margin: 0;
     overflow-y: auto;
     z-index: 1000;
     max-width: 90% !important;
@@ -135,7 +136,7 @@ nav .logo {
 
 .sidebar-links h3 {
     color: #888;
-    padding: 20px 8px 0 32px;
+    padding: 20px 8px 0 0;
     margin: 0;
     font-family: 'inter', sans-serif;
     font-size: 0.85rem;
@@ -148,7 +149,7 @@ nav .logo {
     font-weight: 500;
     color: var(--text-main);
     text-decoration: none;
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 6px;
     display: block;
     transition: all 0.3s ease;
     border-radius: 7px;
@@ -156,17 +157,18 @@ nav .logo {
 
 .sidebar a:hover {
     background-color: #efefef;
-    padding-left: 40px;
 }
 
 .sidebar .odd-link {
-    padding-right: 0 !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
 }
 
 .sidebar span i {
-    padding: 12px;
     border-radius: 7px;
+    margin: 0;
+    padding: 8px;
+    transition: all 0.3s ease;
 }
 
 .sidebar span i:hover {
@@ -207,8 +209,10 @@ nav .logo {
     display: flex;
     flex-direction: column;
     flex-shrink: 0 !important;
-    padding: 20px 40px !important;
-    padding-bottom: 150px !important;
+    padding: 20px 40px 0;
+
+    justify-content: center;
+    margin: 0 auto;
     gap: 15px;
     width: 100% !important;
 }
@@ -235,15 +239,17 @@ nav .logo {
 
 #sidebarOverlay {
     position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.7);
+    pointer-events: none;
     z-index: 10000;
+    border-radius: 0 !important;
 }
 
 .dropdown-btn {

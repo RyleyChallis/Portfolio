@@ -5,11 +5,13 @@
     border: 1.8px solid var(--text-main);
     border-radius: 50px;
     text-decoration: none;
+    font-size: 22px;
     font-family: 'inter', sans-serif;
     font-weight: 500;
     transition: all 0.2s ease;
     cursor: pointer;
     white-space: nowrap !important;
+    text-align: center;
 }
 
 nav .btn-primary:hover {
@@ -22,7 +24,18 @@ nav .btn-primary:hover {
 }
 
 .package-card .btn-primary {
+    display: inline-block;
     margin-top: auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.package-card .btn-primary:hover {
+    filter: brightness(90%);
+}
+
+#process .btn-primary {
+    font-size: 22px;
 }
 
 .btn-secondary {

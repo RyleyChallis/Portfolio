@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/query.css">
 </head>
 <body>
+    <div id="sidebarOverlay" class="overlay" onclick="closeNav()"></div>
     <header>
         <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -73,7 +74,6 @@
                 <ul class="nav-links-second">
                     <li><a class="cta" href="booking.html">Start a Conversation</a></li>
                     <li><a class="cta-two desktop-only" href="portfolio.html">Portfolio</a></li>
-                    <li><button id="sidebarOverlay" class="overlay" onclick="closeNav()"></button></li>
                 </ul>
             </div>
         </nav>
@@ -164,7 +164,7 @@
 
         <section class="final" id="final" style="min-height: 60vh;">
             <h2 style="font-size: 3.2rem; max-width: 650px; margin: 0; padding: 0 0 25px 0;">Ready to Make Your Mark in Your City?</h2>
-            <button onclick="openPopup()" class="btn-primary" href="#">Start Project</button>
+            <a class="btn-primary" href="booking.html">Start Project</a>
         </section>
     </main>
 
@@ -179,7 +179,7 @@
                     <div class="footer-col">
                         <h3>Navigation</h3>
                         <ul>
-                            <li><button onclick="openPopup()" style="background-color: transparent; border: none; color: var(--main-white); font-size: 0.9rem; padding-left: 0;">Start Your Project</button></li>
+                            <li><a href="booking.html">Start A Project</a></li>
                             <li><a href="portfolio.html">Portfolio</a></li>
                             <li><a href="#packages">Packages</a></li>
                             <li><a href="booking.html">Booking</a></li>

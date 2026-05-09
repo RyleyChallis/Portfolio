@@ -14,13 +14,31 @@ window.onclick = function(event) {
 }
 
 function openNav() {
-  document.getElementById("mySidebar").style.width = "350px";
-  document.getElementById("sidebarOverlay").style.display = "block";
+    // 1. Open the sidebar
+    document.getElementById("mySidebar").style.width = "350px";
+    
+    // 2. Make overlay visible and "solid" to clicks
+    const overlay = document.getElementById("sidebarOverlay");
+    overlay.style.opacity = "1";
+    overlay.style.pointerEvents = "auto"; 
+    
+    // 3. Lock the background (prevents scrolling and highlighting)
+    document.body.style.overflow = "hidden"; 
+    document.body.style.userSelect = "none";
 }
 
 function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("sidebarOverlay").style.display = "none";
+    // 1. Close the sidebar
+    document.getElementById("mySidebar").style.width = "0";
+    
+    // 2. Hide overlay and make it "transparent" to clicks
+    const overlay = document.getElementById("sidebarOverlay");
+    overlay.style.opacity = "0";
+    overlay.style.pointerEvents = "none";
+    
+    // 3. Unlock the background
+    document.body.style.overflow = "auto";
+    document.body.style.userSelect = "auto";
 }
 
 const faqItems = document.querySelectorAll('.faq-card');
