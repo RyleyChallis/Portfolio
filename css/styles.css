@@ -199,8 +199,9 @@ h1 {
 }
 
 #about {
-    padding-bottom: 75px;
+    min-height: 50vh !important;
     background-color: #1a1919 !important;
+    padding-bottom: 50px;
 }
 
 #about .about-container {
@@ -210,8 +211,12 @@ h1 {
     justify-content: space-between;
 }
 
-#about h3, #about h2, #about p {
+#about h2, #about p {
     color: var(--main-white);
+}
+
+#about h2 {
+    padding-bottom: 20px;
 }
 
 #about .about-info {
@@ -226,7 +231,7 @@ h1 {
 
 #about .about-image img {
     display: block;
-    max-width: 450px;
+    max-width: 350px;
     height: auto;
     border-radius: 7px;
     background-color: transparent;

@@ -39,8 +39,8 @@ nav .logo {
     font-weight: 500;
     font-size: 1.1rem;
     font-family: 'inter', sans-serif;
-    padding: 10px;
-    border-radius: 7px;
+    padding: 14px 16px;
+    border-radius: 50px;
     position: relative;
     transition: all 0.3s ease;
     line-height: 1 !important;
