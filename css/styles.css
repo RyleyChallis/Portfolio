@@ -8,6 +8,13 @@ html, body {
     box-sizing: border-box;
 }
 
+:root {
+    --main-yellow: #faef1a;
+    --main-white: #faf8f8;
+    --off-white: #f5f0f0;
+    --text-main: #333;
+}
+
 #hero, section {
     min-height: 100vh;
     width: 100%;
@@ -15,6 +22,38 @@ html, body {
     background-color: var(--main-white);
     margin: 0;
     padding: 0;
+}
+
+#hero {
+    padding-left: 40px;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-family: 'fraunces', serif;
+    font-weight: bold;
+    color: var(--text-main);
+    max-width: 70%;
+    margin: 0;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    font-family: 'inter', sans-serif;
+    color: var(--text-main);
+    max-width: 80%;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 1.4;
 }
 
 h2 {

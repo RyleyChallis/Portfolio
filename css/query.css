@@ -24,8 +24,8 @@
         justify-items: center !important;
         align-items: center !important;
         width: 100% !important;
-        height: auto !important;   /* Force it to grow as long as it needs to */
-        padding-top: 50px !important; /* Manually push the first card down */
+        height: auto !important;
+        padding-top: 50px !important;
         margin: 0 auto !important;
         gap: 75px;
     }
@@ -215,6 +215,7 @@
     body section#hero h1 {
         font-size: 2.2rem;
         max-width: none !important;
+        margin-bottom: 75px;
     }
 
     p.desktop-only {
