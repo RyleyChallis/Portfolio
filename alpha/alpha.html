@@ -27,35 +27,6 @@
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/button.css">
     <link rel="stylesheet" href="../css/query.css">
-
-    <!-- <script>
-    document.documentElement.style.display = 'none';
-
-    async function validateAccess() {
-        const secretHash = "5eeb0e39b3d3e094d8bb00b2c96dabedda316eb4d6f0e7fd3198106901820e94";
-        
-        const entry = prompt("RC | Client Portal - Please enter your access code:");
-        
-        if (!entry) {
-            window.location.href = "https://google.com";
-            return;
-        }
-
-        const msgBuffer = new TextEncoder().encode(entry);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashedEntry = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-
-        if (hashedEntry === secretHash) {
-        document.documentElement.style.display = 'block';
-        } else {
-        alert("Incorrect code.");
-        window.location.href = "https://google.com";
-        }
-    }
-
-    window.onload = validateAccess;
-    </script> -->
 </head>
 <body>
     <div id="sidebarOverlay" class="overlay" onclick="closeNav()"></div>
@@ -138,6 +109,22 @@
                 </div>
             </div>
         </section>
+
+        <section id="strategy">
+            <span
+            <div class="section-header">
+                <h2>Strategy & Planning</h2>
+                <p class="subtitle">The foundation of the project involves defining the core objectives, user personas, and technical requirements. We establish a clear roadmap to ensure the final product aligns perfectly with your brand's vision.</p>
+            </div>
+            <div class="container">
+                <ul>
+                    <li><b>Discovery Call:</b>Aligning on project goals and KPIs.</li>
+                    <li><b>Information Architecture:</b>Mapping out the site structure and user flow.</li>
+                    <li><b>Technical Audit:</b>Reviewing existing assets and hosting requirements.</li>
+                </ul>
+            </div>
+        </section>
     </main>
+    <script src="css/dash.js"></script>
 </body>
 </html>
