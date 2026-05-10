@@ -104,17 +104,19 @@ nav .btn-primary:hover {
 
 .popup-buttons .cta-two {
     align-items: flex-start;
-    background-color: transparent;
+    background-color: white;
     color: var(--text-main);
     padding: 16px 24px;
     border: 1.8px solid var(--text-main);
     border-radius: 50px;
     text-decoration: none;
+    font-size: 22px !important;
     font-weight: 500;
     transition: all 0.3s ease;
     margin: 0 !important;
+    cursor: pointer;
 }
 
-.popup-buttons button.cta-two:hover {
-    filter: brightness(90%);
+.popup-content .popup-buttons .cta-two:hover {
+    background-color: #efefef;
 }

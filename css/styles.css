@@ -422,18 +422,33 @@ footer h2, footer h3, footer p {
     font-size: 0.8rem;
 }
 
+.popup-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    max-width: 50%;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10002 !important;
+}
+
+.popup-content button {
+    background-color: transparent;
+    border: transparent;
+}
+
 .popup-content h3 {
-    font-size: 2.2rem;
-    font-family: 'fraunces', serif;
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-weight: 700;
 }
 
 .popup-content p {
     font-size: 1rem;
     font-family: 'inter', sans-serif;
-}
-
-.popup-content p span {
-    font-style: italic;
 }
 
 .legal-page p {

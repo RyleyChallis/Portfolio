@@ -80,35 +80,59 @@ const form = document.getElementById('booking-form');
 if (!form) {
     console.error("CRITICAL: The browser cannot find an element with id='booking-form'");
 } else {
-  form.addEventListener('submit', e => {
-      e.preventDefault(); 
-      openPopup(); 
-  });
+  // 1. The Main Listener on the 'Send Inquiry' Button
+form.addEventListener('submit', e => {
+    e.preventDefault();
 
-  function sendDataToSheet() {
-      const submitBtn = document.getElementById('final-confirm-btn');
-      submitBtn.innerText = "Sending...";
-      submitBtn.disabled = true;
+    // 2. VALIDATION CHECK
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    let firstInvalidInput = null;
 
-      const formData = new FormData(form);
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            if (!firstInvalidInput) firstInvalidInput = input;
+            input.style.borderColor = "red";
+        } else {
+            input.style.borderColor = "";
+        }
+    });
 
-      fetch(scriptURL, { method: 'POST', body: formData })
-          .then(response => {
-        submitBtn.innerText = "Success!";
-        submitBtn.style.backgroundColor = "#28a745"; // Success green
-        submitBtn.style.color = "#ffffff";
-        submitBtn.style.borderColor = "#28a745";
+    if (firstInvalidInput) {
+        firstInvalidInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstInvalidInput.focus();
+        return; // Stop here if form is incomplete
+    }
 
-        setTimeout(() => {
-            closePopup();
-            form.reset();
-            
-            submitBtn.innerText = "Confirm and Send";
-            submitBtn.style.backgroundColor = "";
-            submitBtn.style.color = "";
-            submitBtn.style.borderColor = "";
+    // 3. SENDING DATA
+    const submitBtn = form.querySelector('.submit-btn');
+    submitBtn.innerText = "Sending...";
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => {
+            // 4. SUCCESS ACTIONS
+            submitBtn.innerText = "Success!";
+            submitBtn.style.backgroundColor = "#28a745";
+
+            // Open the Success Popup
+            openPopup();
+
+            setTimeout(() => {
+                closePopup();
+                form.reset();
+                
+                // Reset button for next time
+                submitBtn.innerText = "Send Inquiry";
+                submitBtn.style.backgroundColor = "";
+                submitBtn.disabled = false;
+            }, 10000);
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            submitBtn.innerText = "Try Again";
             submitBtn.disabled = false;
-        }, 2000); 
-    })
-  }
+        });
+});
 }
