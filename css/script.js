@@ -1,5 +1,11 @@
 function openPopup() {
-  document.getElementById('project-popup').style.display = 'flex';
+    const popup = document.getElementById('project-popup');
+    if (popup) {
+        popup.style.display = 'flex'; // Must be flex to center the content
+        console.log("Popup should now be flex");
+    } else {
+        console.error("Could not find element with ID project-popup");
+    }
 }
 
 function closePopup() {
