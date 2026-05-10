@@ -1,15 +1,11 @@
 function openPopup() {
     const popup = document.getElementById('project-popup');
-    if (popup) {
-        popup.style.display = 'flex'; // Must be flex to center the content
-        console.log("Popup should now be flex");
-    } else {
-        console.error("Could not find element with ID project-popup");
-    }
+    popup.classList.add('active');
 }
 
 function closePopup() {
-  document.getElementById('project-popup').style.display = 'none';
+    const popup = document.getElementById('project-popup');
+    popup.classList.remove('active');
 }
 
 window.onclick = function(event) {
@@ -31,15 +27,12 @@ function openNav() {
 }
 
 function closeNav() {
-    // 1. Close the sidebar
     document.getElementById("mySidebar").style.width = "0";
     
-    // 2. Hide overlay and make it "transparent" to clicks
     const overlay = document.getElementById("sidebarOverlay");
     overlay.style.opacity = "0";
     overlay.style.pointerEvents = "none";
     
-    // 3. Unlock the background
     document.body.style.overflow = "auto";
     document.body.style.userSelect = "auto";
 }
@@ -86,11 +79,9 @@ const form = document.getElementById('booking-form');
 if (!form) {
     console.error("CRITICAL: The browser cannot find an element with id='booking-form'");
 } else {
-  // 1. The Main Listener on the 'Send Inquiry' Button
 form.addEventListener('submit', e => {
     e.preventDefault();
 
-    // 2. VALIDATION CHECK
     const inputs = form.querySelectorAll('input[required], textarea[required]');
     let firstInvalidInput = null;
 
@@ -106,10 +97,9 @@ form.addEventListener('submit', e => {
     if (firstInvalidInput) {
         firstInvalidInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
         firstInvalidInput.focus();
-        return; // Stop here if form is incomplete
+        return;
     }
 
-    // 3. SENDING DATA
     const submitBtn = form.querySelector('.submit-btn');
     submitBtn.innerText = "Sending...";
     submitBtn.disabled = true;
@@ -118,22 +108,19 @@ form.addEventListener('submit', e => {
 
     fetch(scriptURL, { method: 'POST', body: formData })
         .then(response => {
-            // 4. SUCCESS ACTIONS
             submitBtn.innerText = "Success!";
             submitBtn.style.backgroundColor = "#28a745";
 
-            // Open the Success Popup
             openPopup();
 
             setTimeout(() => {
                 closePopup();
                 form.reset();
                 
-                // Reset button for next time
                 submitBtn.innerText = "Send Inquiry";
                 submitBtn.style.backgroundColor = "";
                 submitBtn.disabled = false;
-            }, 10000);
+            }, 6000);
         })
         .catch(error => {
             console.error('Error!', error.message);

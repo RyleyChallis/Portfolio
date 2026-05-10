@@ -477,3 +477,68 @@ footer h2, footer h3, footer p {
     font-size: 0.8rem;
     color: #7f7f7f !important;
 }
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex; /* Stay flex forever */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    
+    /* The Magic Sauce */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; 
+    transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* Re-enable clicking when visible */
+}
+
+.popup-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    /* Smooth vertical slide + scale */
+    transform: translateY(20px) scale(0.95); 
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.popup-overlay.active .popup-content {
+    transform: translateY(0) scale(1);
+}
+
+.popup-content button {
+    background-color: var(--main-yellow);
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.1);
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.popup-content button:hover {
+    transform: scale(1.15) rotate(-32deg);
+    filter: brightness(90%);
+}
+
+.popup-content h3 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.popup-content p {
+    font-size: 1rem;
+    font-family: 'inter', sans-serif;
+}
