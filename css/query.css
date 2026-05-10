@@ -37,7 +37,7 @@
 @media (max-width: 1078px) {
     #hero h1 {
         font-size: 3.1rem;
-        max-width: 90% !important;
+        max-width: none !important;
     }
     .nav-links-first {
         display: none;
@@ -185,6 +185,9 @@
     }
     .mobile-only {
         display: flex;
+    }
+    .desktop-only {
+        display: none;
     }
     #gallery .mobile-only {
         margin-bottom: 75px;
