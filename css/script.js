@@ -14,15 +14,12 @@ window.onclick = function(event) {
 }
 
 function openNav() {
-    // 1. Open the sidebar
     document.getElementById("mySidebar").style.width = "350px";
     
-    // 2. Make overlay visible and "solid" to clicks
     const overlay = document.getElementById("sidebarOverlay");
     overlay.style.opacity = "1";
     overlay.style.pointerEvents = "auto"; 
     
-    // 3. Lock the background (prevents scrolling and highlighting)
     document.body.style.overflow = "hidden"; 
     document.body.style.userSelect = "none";
 }
@@ -83,48 +80,35 @@ const form = document.getElementById('booking-form');
 if (!form) {
     console.error("CRITICAL: The browser cannot find an element with id='booking-form'");
 } else {
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        const honeypot = document.getElementById('honeypot').value;
-            if (honeypot !== "") {
-                console.warn("Bot detected.");
-                return;
-            }
-        console.log("Button clicked! Attempting to send data...");
-        
-        const submitBtn = form.querySelector('.submit-btn');
-        submitBtn.innerText = "Sending...";
-        submitBtn.disabled = true;
+  form.addEventListener('submit', e => {
+      e.preventDefault(); 
+      openPopup(); 
+  });
 
-        const formData = new FormData(form);
-        console.log("Data being sent:", Object.fromEntries(formData));
-    console.log("SENDING THESE KEYS:", Array.from(new FormData(form).keys()));
+  function sendDataToSheet() {
+      const submitBtn = document.getElementById('final-confirm-btn');
+      submitBtn.innerText = "Sending...";
+      submitBtn.disabled = true;
 
-        fetch(scriptURL, { method: 'POST', body: formData })
-            .then(response => {
-                console.log("Server responded!");
-                return response.text();
-            })
-            .then(text => {
-                if (true) {
-                    submitBtn.innerText = "Sent! I'll be in touch.";
-                    submitBtn.style.backgroundColor = "#2ecc71";
-                    submitBtn.style.borderColor = "#2ecc71";
+      const formData = new FormData(form);
 
-                    form.reset(); 
+      fetch(scriptURL, { method: 'POST', body: formData })
+          .then(response => {
+        submitBtn.innerText = "Success!";
+        submitBtn.style.backgroundColor = "#28a745"; // Success green
+        submitBtn.style.color = "#ffffff";
+        submitBtn.style.borderColor = "#28a745";
 
-                    setTimeout(() => { 
-                        submitBtn.innerText = "Send Inquiry & Book Call";
-                        submitBtn.style.backgroundColor = "";
-                        submitBtn.style.borderColor = "";
-                        submitBtn.disabled = false;
-                    }, 5000);
-                }
-            })
-            .catch(error => {
-                console.error('Fetch error:', error);
-                submitBtn.innerText = "Error. Try again.";
-                submitBtn.disabled = false;
-            });
-    });
+        setTimeout(() => {
+            closePopup();
+            form.reset();
+            
+            submitBtn.innerText = "Confirm and Send";
+            submitBtn.style.backgroundColor = "";
+            submitBtn.style.color = "";
+            submitBtn.style.borderColor = "";
+            submitBtn.disabled = false;
+        }, 2000); 
+    })
+  }
 }

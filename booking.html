@@ -167,7 +167,7 @@
             </div>
 
             <div class="form-footer">
-                <button type="submit" class="btn-primary submit-btn" style="display: flex; margin: 0 auto; justify-content: center;">
+                <button type="button" onclick="openPopup()" class="btn-primary submit-btn" style="display: flex; margin: 0 auto; justify-content: center;">
                     Send Inquiry
                 </button>
                 <p class="secure-note">🔒 Your details are kept private and used only for our project communication.</p>
@@ -211,5 +211,19 @@
         </div>
     </footer>
     <script src="css/script.js"></script>
+    <div id="project-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h3>Project Start-Up</h3>
+            <p><span>Please note:</span> To secure your slot, a <strong>50% non-refundable booking deposit</strong> is required before work commences.</p>
+            
+            <div class="popup-buttons">
+                <button onclick="closePopup()" class="cta-two">Cancel</button>
+            
+                <button type="submit" class="btn-primary" href="booking.html">
+                I Understand - Send Inquiry
+            </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

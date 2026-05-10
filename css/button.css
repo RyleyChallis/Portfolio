@@ -38,6 +38,13 @@ nav .btn-primary:hover {
     font-size: 22px;
 }
 
+.cta-two {
+    background-color: transparent;
+    border: 1.8px solid var(--text-main);
+    padding: 16px 24px;
+    transition: all 0.3s ease;
+}
+
 .btn-secondary {
     background: transparent;
     color: var(--text-main);
@@ -53,8 +60,8 @@ nav .btn-primary:hover {
 }
 
 .btn-secondary:hover {
-    color: var(--main-yellow);
-    filter: brightness(90%);
+    filter: brightness(90%) !important;
+    border: 1.8px solid var(--text-main);
 }
 
 .popup-overlay {
@@ -84,6 +91,7 @@ nav .btn-primary:hover {
 }
 
 .popup-buttons .btn-primary {
+    background-color: var(--main-yellow);
     padding: 8px 12px;
     display: flex;
     align-items: center;
@@ -91,5 +99,22 @@ nav .btn-primary:hover {
 
 .popup-buttons .btn-primary:hover {
     border: 1.8px solid var(--text-main);
+    filter: brightness(90%);
+}
+
+.popup-buttons .cta-two {
+    align-items: flex-start;
+    background-color: transparent;
+    color: var(--text-main);
+    padding: 16px 24px;
+    border: 1.8px solid var(--text-main);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 !important;
+}
+
+.popup-buttons button.cta-two:hover {
     filter: brightness(90%);
 }

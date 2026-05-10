@@ -79,7 +79,7 @@ nav .logo {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     margin: 0 !important;
 }
 .nav-links-second .cta:hover {
@@ -87,7 +87,7 @@ nav .logo {
     border-bottom: 5px solid var(--text-main);
 }
 
-.nav-links-second .cta-two, .popup-buttons .cta-two, .openbtn {
+.nav-links-second .cta-two, .openbtn {
     background-color: transparent;
     color: var(--text-main);
     padding: 16px 24px;
@@ -95,10 +95,14 @@ nav .logo {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.1s ease;
+    transition: all 0.3s ease;
 }
 
-.cta-two:hover, .openbtn:hover {
+.nav-links-second .cta-two:hover {
+    border-bottom: 5px solid var(--text-main);
+}
+
+.openbtn:hover {
     border-bottom: 5px solid var(--text-main);
 }
 
@@ -175,12 +179,14 @@ nav .logo {
 }
 
 .sidebar .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 45px;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    display: flex;          /* Or inline-flex */
+    padding: 20px;          /* This now expands the clickable area */
+    cursor: pointer;
+    border: none;           /* Removes default button styling */
+    background: transparent;
+
+    margin-left: auto;
+    margin-bottom: auto;
 }
 
 .openbtn {
@@ -328,4 +334,7 @@ nav .logo {
     display: flex;
     margin: 0 auto;
     justify-content: center;
+    border-radius: 50px;
+    font-size: 22px;
+    font-family: 'inter', sans-serif;
 }

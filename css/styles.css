@@ -212,7 +212,7 @@ p {
 #about {
     min-height: 50vh !important;
     background-color: #1a1919 !important;
-    padding-bottom: 50px;
+    padding: 75px 0;
 }
 
 #about .about-container {
