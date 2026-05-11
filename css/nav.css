@@ -97,7 +97,7 @@ nav .logo {
     position: relative;
     overflow: hidden;
     align-items: flex-start;
-    background-color: #faf8f8;
+    background-color: var(--main-white);
     color: var(--text-main);
     padding: 16px 24px !important;
     border: 1.8px solid var(--text-main);
@@ -111,7 +111,7 @@ nav .logo {
 
 .nav-links-second .cta-two:hover {
     box-shadow: 0 5px 0 0 var(--text-main);
-    filter: brightness(100%) !important;
+    filter: brightness(95%) !important;
 }
 
 .openbtn:hover {

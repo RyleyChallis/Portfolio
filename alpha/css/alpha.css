@@ -15,6 +15,7 @@ html, body {
 :root {
     --main-yellow: #faef1a;
     --main-green: #76b231;
+    --main-orange: #f0ae58;
     --main-white: #faf8f8;
     --off-white: #f5f0f0;
     --text-main: #333;
@@ -31,6 +32,70 @@ html, body {
 
 section {
     position: relative;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 1. The Container: Create a 'blueprint' feel */
+.section-locked {
+    position: relative;
+    filter: grayscale(100%);
+    background-color: #fafafa; /* Subtle shift from pure white */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* 2. The Header: Use an outline instead of solid faded text */
+.section-locked h2 {
+    color: transparent;
+    -webkit-text-stroke: 1px #d5d5d5;
+}
+
+/* 3. The Content: Hide descriptions, keep only titles */
+.section-locked p, 
+.section-locked .focus-friction-container {
+    display: none; 
+}
+
+.section-locked ul li {
+    color: #bbb;
+    list-style: none;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+
+.section-locked ul li b {
+    pointer-events: none;
+}
+
+.section-locked::after {
+    content: "PHASE LOCKED";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    color: #fff;
+    padding: 12px 24px;
+    font-family: 'fraunces', sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    border-radius: 4px;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.section-locked::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(4px);
+    z-index: 5;
 }
 
 #hero {
@@ -58,10 +123,10 @@ section .section-header {
     gap: 10px !important;
 
     margin: 0 auto;
-    max-width: 850px;
+    max-width: 60%;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
 .section-header .header-main {
@@ -103,26 +168,6 @@ p {
     margin: 0;
 }
 
-#hero p {
-    font-size: 1.2rem;
-    font-family: 'inter', sans-serif;
-    color: var(--text-main);
-    max-width: 80%;
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    line-height: 1.4;
-}
-
-#summary {
-    background-color: #333333;
-    min-height: 60vh;
-}
-
-#strategy, #visual, #build {
-    position: relative;
-}
-
 #strategy .container, #visual .container, #build .container {
     max-width: 90%;
     margin: 0 auto;
@@ -140,8 +185,9 @@ p {
     font-family: 'fraunces', sans-serif;
     font-weight: 900;
     font-size: 15rem;
-    color: var(--text-main); 
-    opacity: 0.1;
+    color: var(--main-yellow);
+    filter: brightness(60%);
+    opacity: 0;
     z-index: 0;
     top: -20px;
     left: 2%;
@@ -151,26 +197,68 @@ p {
 #visual:before { content: "02"; }
 #build::before { content: "03"; }
 
+#hero p {
+    font-size: 1.2rem;
+    font-family: 'inter', sans-serif;
+    color: var(--text-main);
+    max-width: 80%;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+#summary {
+    background-color: #333333;
+    min-height: 50vh;
+}
+
+.summary-item.completed i {
+    background-color: var(--main-green) !important;
+    color: white;
+}
+
+.summary-item.current i {
+    background-color: var(--main-yellow) !important;
+    color: black;
+}
+
+.summary-item.future .fa-solid, .summary-item.future h3, .summary-item.future p {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.summary-item.future h3, 
+.summary-item.future p {
+    text-decoration: line-through;
+    text-decoration-color: #FF0000;
+}
+
+#summary i {
+    padding: 30px;
+    border-radius: 50px;
+
+    background-color: #efefef;
+    color: var(--text-main);
+    border: 1.8px solid var(--main-white);
+}
+
+#strategy, #visual, #build {
+    position: relative;
+    padding-bottom: 75px;
+}
+
 #summary h2 {
     color: var(--main-white);
 }
 
-#strategy h2 {
+h2 {
     padding-bottom: 0;
+    margin: 0 auto 50px 0;
+    justify-content: center;
     display: flex;
+    text-align: center;
     gap: 20px;
-}
-
-.section-header .header-main .status {
-    align-self: center;
-    padding: 16px 24px !important;
-    margin: 0;
-    border-radius: 50px !important;
-    background-color: var(--main-green);
-    color: var(--main-white);
-    border: 1.8px solid var(--text-main) !important;
-    font-size: 22px !important;
-    font-family: 'inter', sans-serif !important;
 }
 
 #summary .summary-row {
@@ -199,26 +287,168 @@ p {
     margin: 0;
 }
 
+.summary-item i {
+    transition: all 0.3s ease;
+}
+
+.summary-item i:hover {
+    transform: scale(1.15) rotate(-30deg);
+}
+
 main ul {
     list-style: none;
     padding: 0;
     display: flex;
     flex-direction: column;
-    text-align: left;
-    gap: 20px;
-
-    max-width: none;
-    margin: 40px auto 0;
+    text-align: left; /* Text remains left-aligned for readability */
+    gap: 50px;
+    max-width: 80%;
+    margin: 48px auto !important; /* Forces centering on the container itself */
+    align-items: flex-start;
 }
 
 #strategy li, #visual li, #build li {
-    font-size: 24px;
+    font-size: 1rem;
     font-family: 'inter', sans-serif;
     display: flex;
-    gap: 15px;
-    white-space: nowrap;
+    gap: 10px;
 }
 
 li b {
+    font-size: 24px;
     font-family: 'fraunces', serif;
+    white-space: nowrap;
+}
+
+.goals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    text-align: left;
+    background-color: #ededed;
+    border: 1px solid #a8a8a8b4;
+
+    margin: 0 auto;
+    justify-items: center;
+    
+    max-width: 90%;
+
+    border-radius: 15px;
+    padding: 60px 30px;
+    margin-top: 75px;
+}
+
+.goal-card {
+    max-width: 90%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: #1a1919;
+    min-height: 50vh;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    max-width: 90% !important;
+    flex-direction: row;
+    align-items: center !important;
+    padding: 75px 0;
+}
+
+.footer .intro {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer .intro h2 span {
+    color: var(--main-yellow);
+}
+
+.footer .intro h2, .footer .intro p {
+    margin: 0;
+    padding: 0;
+}
+
+footer h2, footer h3, footer p {
+    color: var(--main-white) !important;
+}
+
+.footer .footer-links {
+    display: flex;
+    gap: 50px;
+    max-width: 90% !important;
+}
+
+.footer-col h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: var(--main-yellow) !important;
+}
+
+.footer .footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-col li {
+    list-style: none;
+}
+
+.footer-col li a {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    color: var(--main-white);
+
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col button {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    color: var(--main-white);
+
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col li a:hover, .footer-col li button:hover {
+    color: var(--main-yellow) !important;
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+    border-top: 1px solid #424242;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
 }

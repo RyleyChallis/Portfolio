@@ -24,3 +24,35 @@
 //     }
 
 //     window.onload = validateAccess;
+
+// CHANGE THIS NUMBER TO UPDATE THE WHOLE SITE (1, 2, or 3)
+const currentStageNumber = 1; 
+
+// 1. Update Summary Items (Top of page)
+const summaryItems = document.querySelectorAll('.summary-item');
+summaryItems.forEach((item, index) => {
+    const stagePosition = index + 1;
+    item.classList.remove('completed', 'current', 'future');
+
+    if (stagePosition < currentStageNumber) {
+        item.classList.add('completed');
+    } else if (stagePosition === currentStageNumber) {
+        item.classList.add('current');
+    } else {
+        item.classList.add('future');
+    }
+});
+
+// 2. Update Page Sections (Main content)
+const sections = document.querySelectorAll('section[data-phase]');
+sections.forEach((section) => {
+    const phaseId = parseInt(section.getAttribute('data-phase'));
+
+    if (phaseId > currentStageNumber) {
+        // This is a future stage
+        section.classList.add('section-locked');
+    } else {
+        // This is the current or a completed stage
+        section.classList.remove('section-locked');
+    }
+});
