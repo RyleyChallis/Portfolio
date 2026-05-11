@@ -14,6 +14,7 @@ html, body {
 
 :root {
     --main-yellow: #faef1a;
+    --main-green: #76b231;
     --main-white: #faf8f8;
     --off-white: #f5f0f0;
     --text-main: #333;
@@ -61,6 +62,12 @@ section .section-header {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.section-header .header-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 h1 {
@@ -119,7 +126,9 @@ p {
 #strategy .container, #visual .container, #build .container {
     max-width: 90%;
     margin: 0 auto;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 
     display: flex;
@@ -148,14 +157,28 @@ p {
 
 #strategy h2 {
     padding-bottom: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.section-header .header-main .status {
+    align-self: center;
+    padding: 16px 24px !important;
+    margin: 0;
+    border-radius: 50px !important;
+    background-color: var(--main-green);
+    color: var(--main-white);
+    border: 1.8px solid var(--text-main) !important;
+    font-size: 22px !important;
+    font-family: 'inter', sans-serif !important;
 }
 
 #summary .summary-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 90%;
-    justify-content: space-between;
-
+    justify-content: center;
+    
     margin: 0 auto;
 }
 
@@ -177,11 +200,15 @@ p {
 }
 
 main ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-
     text-align: left;
+    gap: 20px;
+
+    max-width: none;
+    margin: 40px auto 0;
 }
 
 #strategy li, #visual li, #build li {
@@ -189,6 +216,7 @@ main ul {
     font-family: 'inter', sans-serif;
     display: flex;
     gap: 15px;
+    white-space: nowrap;
 }
 
 li b {
