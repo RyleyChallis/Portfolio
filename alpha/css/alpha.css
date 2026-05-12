@@ -35,22 +35,20 @@ section {
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 1. The Container: Create a 'blueprint' feel */
 .section-locked {
-    position: relative;
-    filter: grayscale(100%);
-    background-color: #fafafa; /* Subtle shift from pure white */
+    position: relative !important;
+    display: block !important;
+    background-color: #fafafa;
     pointer-events: none;
     overflow: hidden;
 }
 
-/* 2. The Header: Use an outline instead of solid faded text */
 .section-locked h2 {
     color: transparent;
     -webkit-text-stroke: 1px #d5d5d5;
+    filter: blur(4px);
 }
 
-/* 3. The Content: Hide descriptions, keep only titles */
 .section-locked p, 
 .section-locked .focus-friction-container {
     display: none; 
@@ -65,6 +63,9 @@ section {
     letter-spacing: 1px;
     font-size: 0.8rem;
     pointer-events: none;
+    user-select: none;
+
+    filter: blur(4px);
 }
 
 .section-locked ul li b {
@@ -72,13 +73,13 @@ section {
 }
 
 .section-locked::after {
-    content: "PHASE LOCKED";
+    content: "UPCOMING MILESTONE";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #000;
-    color: #fff;
+    background-color: var(--main-yellow);
+    color: var(--text-main);
     padding: 12px 24px;
     font-family: 'fraunces', sans-serif;
     font-size: 14px;
@@ -92,10 +93,17 @@ section {
 .section-locked::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.4);
-    backdrop-filter: blur(4px);
-    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: rgba(255, 255, 255, 0.4); 
+    
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    z-index: 10;
 }
 
 #hero {
@@ -150,8 +158,8 @@ h2 {
     font-weight: bold;
     color: var(--text-main);
     text-align: center;
-    padding: 75px 0;
-    margin: 0;
+    padding: 75px 0 0 0 !important;
+    margin: 0 !important;
 }
 
 h3 {
@@ -178,6 +186,8 @@ p {
 
     display: flex;
     flex-direction: column;
+    border-left: 1px solid #919191;
+    height: 100%;
 }
 
 #strategy::before, #visual::before, #build::before {
@@ -209,8 +219,12 @@ p {
 }
 
 #summary {
-    background-color: #333333;
+    background-color: #1f1f1f;
     min-height: 50vh;
+}
+
+#summary h2 {
+    margin-bottom: 50px !important;
 }
 
 .summary-item.completed i {
@@ -228,8 +242,11 @@ p {
     cursor: not-allowed;
 }
 
-.summary-item.future h3, 
-.summary-item.future p {
+.summary-item.future i:hover {
+    transform: none;
+}
+
+.summary-item.future h3 { 
     text-decoration: line-through;
     text-decoration-color: #FF0000;
 }
@@ -303,7 +320,7 @@ main ul {
     text-align: left; /* Text remains left-aligned for readability */
     gap: 50px;
     max-width: 80%;
-    margin: 48px auto !important; /* Forces centering on the container itself */
+    margin: 48px auto 10px !important;
     align-items: flex-start;
 }
 
@@ -340,6 +357,27 @@ li b {
 
 .goal-card {
     max-width: 90%;
+}
+
+#final {
+    background-color: #1E293B;
+    min-height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#final h2 {
+    color: var(--main-white);
+    margin: 20px 0 50px 0 !important;
+}
+
+#final .final-links {
+    display: flex;
+    gap: 50px;
+
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .footer-container {

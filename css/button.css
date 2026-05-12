@@ -63,3 +63,24 @@ nav .btn-primary:hover {
     filter: brightness(90%) !important;
     border: 1.8px solid var(--text-main);
 }
+
+#final .final-links .final-card {
+    background-color: var(--main-yellow);
+    border: 1.8px solid var(--text-main);
+    border-radius: 50px;
+
+    padding: 16px 24px;
+}
+
+.final-links .final-card {
+    font-size: 20px;
+    font-family: 'inter', sans-serif;
+    color: var(--text-main);
+
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.final-card:hover {
+    filter: brightness(80%);
+}

@@ -201,6 +201,10 @@
     #final h2 {
         font-size: 2.8rem !important;
     }
+    #summary .summary-row {
+        max-width: 90%;
+        gap: 75px;
+    }
 }
 
 @media (max-width: 526px) {
@@ -218,7 +222,6 @@
     body section#hero h1 {
         font-size: 2.2rem;
         max-width: none !important;
-        margin-bottom: 75px;
     }
 
     p.desktop-only {
