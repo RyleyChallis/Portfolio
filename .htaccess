@@ -1,0 +1,9 @@
+RewriteEngine On
+# 1. Prevent an infinite loop (don't redirect the construction page itself)
+RewriteCond %{REQUEST_URI} !^/under-construction.html$
+
+# 2. OPTIONAL: Let YOU see the site (replace with your IP address)
+# RewriteCond %{REMOTE_ADDR} !^123\.456\.789\.000$
+
+# 3. Redirect everyone else to the construction page
+RewriteRule ^(.*)$ /under-construction.html [R=307,L]
