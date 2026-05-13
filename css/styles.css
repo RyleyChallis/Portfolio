@@ -45,6 +45,10 @@ h1 {
     margin: 0;
 }
 
+#hero p {
+    margin-bottom: 50px;
+}
+
 p, li a {
     font-size: clamp(0.9rem, 4vw, 1.1rem);
     font-family: 'inter', sans-serif;

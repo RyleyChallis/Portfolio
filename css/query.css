@@ -187,7 +187,7 @@
         display: none !important;
     }
     .mobile-only {
-        display: flex;
+        display: flex !important;
     }
     .package-card h3 span {
         display: none;
@@ -226,10 +226,6 @@
 
     p.desktop-only {
         display: none;
-    }
-
-    p.mobile-only {
-        display: flex;
     }
     #about .about-image {
         max-width: 80% !important;
