@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under Construction | Ryley Challis Web Development</title>
+    <title>Ryley Challis | Building Premium Online Experiences for Small British Businesses</title>
     
+    <meta name="description" content="Bespoke, hand-coded web development for Sussex businesses. High-performance digital experiences designed to elevate your brand and drive results.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -27,12 +28,226 @@
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/query.css">
 </head>
+<body>
+    <div id="sidebarOverlay" class="overlay" onclick="closeNav()"></div>
+    <header>
+        <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <div class="sidebar-links">
+            <h3>Navigation</h3>
+                <a href="#">Home</a>
+                <a href="index.html#packages">Pricing</a>
+                <div class="dropdown-container">
+                    <div class="dropdown-btn">
+                        <a class="odd-link" href="portfolio.html" style="text-decoration: none; color: inherit; flex-grow: 1;">Portfolio</a>
+                        
+                        <span class="arrow-trigger" onclick="toggleDropdown(event)" style="cursor: pointer; padding-left: 15px;">
+                            <i class="fa-solid fa-chevron-right dropdown-arrow"></i>
+                        </span>
+                    </div>
 
-<main>
-    <section id="hero">
-        <h1>I'm Sorry!</h1>
-        <p>This site is currently under construction indefinitely.</p>
+                    <div id="sidebarDropdown" class="dropdown-content">
+                        <a href="portfolio.html#tipsy">Tipsy Kisses</a>
+                        <a href="portfolio.html#elate">Elate</a>
+                        <a href="portfolio.html">See All Projects</a>
+                    </div>
+                </div>
+                <a href="index.html#about">About</a>
+            </div>    
+            
+        <div class="sidebar-footer">
+            <div class="footer-logo">RC<span>.</span></div>
+                <p>&copy; 2026 Ryley Challis</p>
+                <a class="btn-primary" href="booking.html">Start Project</a>
+            </div>
+        </div>
 
-        <a class="btn-primary" href="mailto:ryley.challis@outlook.com">Contact Me Directly</a>
-    </section>
-</main>
+        <nav class="navbar">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+            <a class="logo" href="#">RC<span>.</span></a>
+            <div class="nav-links">
+                <ul class="nav-links-first">
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#packages">Pricing</a></li>
+                </ul>
+                <ul class="nav-links-second">
+                    <li><a href="mailto:ryley.challis@outlook.com?subject=General Inquiry - Let's Work Together" class="cta" target="_blank">Start a Conversation</a></li>
+                    <li><a class="cta-two desktop-only" href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main-page">
+        <section id="hero">
+            <div class="header-content">
+                <h1>Building Premium Online Experiences for Businesses Across the UK</h1>
+                <p class="desktop-only">I'm Ryley, a professional web developer, and I specialise in crafting stunning websites that captivate your audience and drive business growth. With a focus on quality and innovation, we create digital experiences that leave a lasting impression.</p>
+                <p class="mobile-only">I'm Ryley, a professional web developer, and I specialise in crafting stunning websites that captivate your audience and drive business growth with a focus on quality and innovation.</p>
+
+                <a href="mailto:ryley.challis@outlook.com?subject=General Inquiry - Let's Work Together" class="btn-primary" target="_blank">Start a Conversation</a>
+            </div>
+        </section>
+
+        <section id="packages">
+            <h2>What I Offer</h2>
+            <div class="package-container">
+                <div class="package-card">
+                    <span class="number">Basic</span>
+                    <h3>Starter Pack <span>(1-2 Pages)</span></h3>
+                    <ul>
+                        <li class="mobile-only">1-2 Custom Pages</li>
+                        <li>E.g., Home + simple Contact/Gallery page.</li>
+                        <li><span>Features:</span> Responsiveness, basic SEO (meta tags), and a contact form.</li>
+                        <li><span>Price Range:</span> £400-£650</li>
+                    </ul>
+                    <a class="btn-primary" href="booking.html">Start Project</a>
+                </div>
+
+                <div class="package-card">
+                    <span class="number">Popular</span>
+                    <h3>Business Suite <span>(3-5 Pages)</span></h3>
+                    <ul>
+                        <li class="mobile-only">3-5 Custom Pages</li>
+                        <li>E.g., Home, About, Services, Blog/FAQ, Contact</li>
+                        <li><span>Features:</span> Google Maps Integration & Local SEO, and Analytics setup</li>
+                        <li><span>Price Range:</span> £700-£900</li>
+                    </ul>
+                    <a class="btn-primary" href="booking.html">Start Project</a>
+                </div>
+
+                <div class="package-card">
+                    <span class="number">Expert</span>
+                    <h3>Bespoke Suite <span>(6-10 Pages)</span></h3>
+                    <ul>
+                        <li class="mobile-only">6-10 Custom Pages</li>
+                        <li>E.g., Complete Brand Site + Product Showcase, Portfolio, or Service Hub.</li>
+                        <li><span>Features:</span> Custom Layout Design, Advanced Image Optimisation, and Multi-Step Contact Flow</li>
+                        <li><span>Price Range:</span> £950-£1,500+</li>
+                    </ul>
+                    <a class="btn-primary" href="booking.html">Start Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="process">
+            <h2>How do I Work?</h2>
+            <div class="process-container">
+                <div class="process-card">
+                    <h3>
+                        <span>Step 01: Strategy & Prep</span>
+                    </h3>
+                    <p>We discuss your goals, target audience and brand vibe to ensure the site actually grows your business.</p>
+                </div>
+                <div class="process-card">
+                    <h3>
+                        <span>Step 02: Build & Refine</span>
+                    </h3>
+                    <p>I develop your site using clean, modern code with regular updates so you can see the progress in real-time.</p>
+                </div>
+                <div class="process-card">
+                    <h3>
+                        <span>Step 03: Launch & Support</span>
+                    </h3>
+                    <p>Once you're 100% happy with the design, we go live. Once we’re live, I provide a handover pack and 30 days of free support for any small text or image updates you need.</p>
+                </div>
+                <button class="btn-primary" onclick="openPopup()" >Secure Your Spot</button>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-container">
+                <div class="about-info">
+                    <h2>Meet Your Developer</h2>
+                    <p>Hi, I'm Ryley. I specialise in building high-performance, hand-coded websites for small British businesses. I believe a website should be more than just a digital business card—it should be a high-performance tool that works for you.</p>
+                    <p>Unlike many who rely on clunky site builders, I write every line of code myself to ensure your site isn't just beautiful, but lightning-fast, secure, and uniquely yours.</p>
+                    <p>My goal is to take the technical weight off your shoulders. From our first strategy session to the final launch, I focus on creating a digital presence that reflects the quality of your brand and provides a seamless experience for your customers.</p>
+                </div>
+                <div class="about-image">
+                    <picture>
+                        <source srcset="css/img/about-mobile.webp" media="(max-width: 768px)">
+                        
+                        <img src="css/img/about-mobile.webp" alt="Professional Web Development Services" class="hero-img" fetchpriority="high">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-container">
+                <h2>Common Questions</h2>
+
+                <div class="faq-card">
+                    <button class="faq-question">How long does a typical project take?</button>
+                    <div class="faq-answer">
+                        <p>Most sites are completed within 2 to 4 weeks. This includes our initial strategy session, the build phase, and final refinements. I'll declare any additional time I may need before we reach the deadline.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">Do I own my website once it's finished?</button>
+                    <div class="faq-answer">
+                        <p>100% yes. You own the code and all assets once the final payment is cleared. No hidden subscription fees.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <button class="faq-question">Are there any hidden or recurring costs?</button>
+                    <div class="faq-answer">
+                        <p>None from my side. The price we agree on is for the complete build. You will only need to cover your own domain and hosting (usually around £10-15/month), which I will help you set up so you have full control over the billing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">What do I need to provide before we start?</button>
+                    <div class="faq-answer">
+                        <p>To keep the project on track, I’ll need your branding (logo/colours), any images you'd like me to use, and the text for your pages. If you don't have photos, I can source high-quality, professional imagery that fits your brand's aesthetic.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-question">Will my website show up on Google?</button>
+                    <div class="faq-answer">
+                        <p>Yes. Because I hand-code your site with clean HTML, it is naturally much faster and easier for Google to read than a template-based site. I include essential SEO setup as standard to ensure you're visible from day one.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="intro">
+                    <h2>RC<span>.</span></h2>
+                    <p>Bespoke web development for British businesses and beyond. I specialise in hand-coded solutions that cut out the bloat of traditional site builders, focusing on speed, performance, and modern design.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="booking.html">Start A Project</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="#packages">Packages</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="https://instagram.com/ryley.challis" target="_blank" rel="noopener">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="legal.html#privacy">Privacy Policy</a></li>
+                            <li><a href="legal.html#cookies">Cookie Policy</a></li>
+                            <li><a href="legal.html#terms">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ryley Challis</p>
+                <p>All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="css/script.js" defer></script>
+</body>
+</html>
