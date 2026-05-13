@@ -403,6 +403,7 @@ input:focus {
 
 .footer .intro h2 span {
     color: var(--main-yellow);
+    gap: 1px !important;
 }
 
 .footer .intro h2, .footer .intro p {

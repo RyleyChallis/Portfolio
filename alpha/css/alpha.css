@@ -271,10 +271,10 @@ p {
 
 h2 {
     padding-bottom: 0;
-    margin: 0 auto 50px 0;
-    justify-content: center;
+    margin: 0 auto 50px 0 !important;
+    justify-content: center !important;
     display: flex;
-    text-align: center;
+    text-align: center !important;
     gap: 20px;
 }
 
@@ -310,6 +310,19 @@ h2 {
 
 .summary-item i:hover {
     transform: scale(1.15) rotate(-30deg);
+}
+
+.more-text {
+    display: inline; /* Visible on desktop */
+}
+
+.subtitle-wrapper {
+    z-index: 10;
+}
+
+#read-more-check, 
+.read-more-label {
+    display: none; /* Hidden on desktop */
 }
 
 main ul {
@@ -412,6 +425,12 @@ li b {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.footer .intro h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 1px !important;
 }
 
 .footer .intro h2 span {

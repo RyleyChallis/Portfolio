@@ -336,6 +336,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 1px !important;
 }
 
 .footer .intro h2 span {
