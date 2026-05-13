@@ -79,15 +79,17 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--main-yellow);
+    border: 1.8px solid var(--text-main);
     color: var(--text-main);
     padding: 12px 24px;
     font-family: 'fraunces', sans-serif;
     font-size: 14px;
     letter-spacing: 4px;
     font-weight: 700;
-    border-radius: 4px;
+    border-radius: 50px;
     z-index: 10;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .section-locked::before {
@@ -341,6 +343,7 @@ main ul {
     font-size: 1rem;
     font-family: 'inter', sans-serif;
     display: flex;
+    flex-direction: row;
     gap: 10px;
 }
 
@@ -358,14 +361,13 @@ li b {
     background-color: #ededed;
     border: 1px solid #a8a8a8b4;
 
-    margin: 0 auto;
+    margin: 75px auto 0 auto;
     justify-items: center;
     
     max-width: 90%;
 
     border-radius: 15px;
     padding: 60px 30px;
-    margin-top: 75px;
 }
 
 .goal-card {
@@ -382,7 +384,7 @@ li b {
 
 #final h2 {
     color: var(--main-white);
-    margin: 20px 0 50px 0 !important;
+    margin: 20px auto 50px auto !important;
 }
 
 #final .final-links {
@@ -391,6 +393,13 @@ li b {
 
     margin: 0 auto;
     justify-content: center;
+}
+
+.final-links .final-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer-container {

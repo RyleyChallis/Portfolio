@@ -1,7 +1,7 @@
 // document.documentElement.style.display = 'none';
 
 //     async function validateAccess() {
-//         const secretHash = "5eeb0e39b3d3e094d8bb00b2c96dabedda316eb4d6f0e7fd3198106901820e94";
+//         const secretHash = "1252ff21617838b1ad16867288a22422710a601230d9446e88ae5d6523fc8fec";
         
 //         const entry = prompt("RC | Client Portal - Please enter your access code:");
         
