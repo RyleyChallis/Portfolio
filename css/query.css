@@ -257,20 +257,6 @@
     .footer-links li a {
         font-size: 1rem !important;
     }
-    .footer-bottom {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        margin: 0 auto;
-        gap: 0 !important;
-    }
-    .footer-bottom p {
-        font-size: 0.8rem !important;
-    }
-    .footer-bottom p:nth-child(2) {
-        margin-top: -5px !important;
-    }
     .sidebar {
         max-width: 80% !important;
     }
