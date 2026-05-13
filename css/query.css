@@ -207,6 +207,16 @@
     #final h2 {
         font-size: 2.8rem !important;
     }
+    .footer-bottom {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center;
+        gap: 5px;
+        padding-bottom: 40px;
+    }
+    .footer-bottom p {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 572px) {
