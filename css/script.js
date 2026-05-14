@@ -15,6 +15,23 @@ window.onclick = function(event) {
   }
 }
 
+function openQuotePopup() {
+    const popup = document.getElementById('quote-popup');
+    popup.classList.add('active');
+}
+
+function closeQuotePopup() {
+    const popup = document.getElementById('quote-popup');
+    popup.classList.remove('active');
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById('quote-popup');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 function openNav() {
     document.getElementById("mySidebar").style.width = "350px";
     
@@ -127,5 +144,64 @@ form.addEventListener('submit', e => {
             submitBtn.innerText = "Try Again";
             submitBtn.disabled = false;
         });
-});
-}
+    });
+};
+
+const quoteURL = 'https://script.google.com/macros/s/AKfycbwkuW9BNtSa7FWVbBBl9CvQZno7Hxh7XOLCzxslPFck-sid3-_xMeXN44f7MtG4Cfh5gA/exec';
+const quoteForm = document.getElementById('quote-form');
+
+if (!quoteForm) {
+    console.error("CRITICAL: The browser cannot find an element with id='quote-form'");
+} else {
+quoteForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const inputs = quoteForm.querySelectorAll('input[required], textarea[required]');
+    let firstInvalidInput = null;
+
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            if (!firstInvalidInput) firstInvalidInput = input;
+            input.style.borderColor = "red";
+        } else {
+            input.style.borderColor = "";
+        }
+    });
+
+    if (firstInvalidInput) {
+        firstInvalidInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstInvalidInput.focus();
+        return;
+    }
+
+    const submitBtn = form.querySelector('.submit-btn');
+    submitBtn.innerText = "Sending...";
+    submitBtn.disabled = true;
+
+    const quoteFormData = new FormData(form);
+
+    fetch(scriptURL, { method: 'POST', body: quoteFormData })
+        .then(response => {
+            submitBtn.innerText = "Success!";
+            submitBtn.style.backgroundColor = "#28a745";
+
+            openPopup();
+
+            setTimeout(() => {
+                closePopup();
+                form.reset();
+                
+                submitBtn.innerText = "Send Inquiry";
+                submitBtn.style.backgroundColor = "";
+            }, 6000);
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            submitBtn.innerText = "Try Again";
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            console.log("Process Completed.");
+        });
+    });
+};

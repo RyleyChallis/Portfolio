@@ -106,7 +106,7 @@
     }
 }
 
-@media (max-width: 878px) {
+@media (max-width: 879px) {
     .dashboard #final {
         padding-bottom: 75px;
     }
@@ -117,6 +117,27 @@
     .dashboard .final-links .final-card:last-child {
         grid-column: 1 / -1;
         justify-self: center;
+    }
+    .quote-second {
+        align-items: center;
+    }
+    .popup-content .quote-group:not(:first-child) {
+        display: flex;
+        flex-direction: column;
+    }
+    .popup-content .quote-group:not(:first-child) h4 {
+        max-width: 90%;
+    }
+    .quote-second {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+    .quote-second .quote-group {
+        width: 100% !important;
+    }
+    .quote-second .quote-group select {
+        width: 100%;
     }
 }
 
@@ -146,10 +167,6 @@
     }
     .faq-question::after {
         margin-left: 50px;
-    }
-    .popup-content {
-        max-width: 90%;
-        min-height: 350px;
     }
     .popup-content .btn-primary {
         padding: 16px 28px;

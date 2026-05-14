@@ -100,7 +100,7 @@
                         <li>1-2 Custom Pages</li>
                         <li>E.g., Home + simple Contact/Gallery page.</li>
                         <li><span>Features:</span> Responsiveness, basic SEO (meta tags), and a contact form.</li>
-                        <li><span>Price Range:</span> £400-£650</li>
+                        <li><span>Starting at:</span> £450</li>
                     </ul>
                     <a class="btn-primary" href="booking.html">Start Project</a>
                 </div>
@@ -112,7 +112,7 @@
                         <li>3-5 Custom Pages</li>
                         <li>E.g., Home, About, Services, Blog/FAQ, Contact</li>
                         <li><span>Features:</span> Google Maps Integration & Local SEO, and Analytics setup</li>
-                        <li><span>Price Range:</span> £700-£900</li>
+                        <li><span>Starting at:</span> £700</li>
                     </ul>
                     <a class="btn-primary" href="booking.html">Start Project</a>
                 </div>
@@ -124,9 +124,8 @@
                         <li>6-10 Custom Pages</li>
                         <li>E.g., Complete Brand Site + Product Showcase, Portfolio, or Service Hub.</li>
                         <li><span>Features:</span> Custom Layout Design, Advanced Image Optimisation, and Multi-Step Contact Flow</li>
-                        <li><span>Price Range:</span> £950-£1,500+</li>
                     </ul>
-                    <a class="btn-primary" href="booking.html">Start Project</a>
+                    <button class="btn-primary" onclick="openQuotePopup()">Start Project</button>
                 </div>
             </div>
         </section>
@@ -248,6 +247,48 @@
             </div>
         </div>
     </footer>
+    <div id="quote-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closeQuotePopup()">&times;</button>
+            <h3>Request a Quote</h3>
+            <p>Please fill out this short form, and I will personally review your entry within 48 hours, followed by an email to you!</p>
+            <form id="quote-form">
+                <div class="quote-first">
+                    <div class="quote-group">
+                        <h4>Name:</h4>
+                        <input type="text" name="client_name" type="text" placeholder="E.g., John Doe" required>
+                    </div>
+                    <div class="quote-group">
+                        <h4>Email:</h4>
+                        <input type="email" name="client_email" type="text" placeholder="E.g., john@email.com" required>
+                    </div>
+                </div>
+                <div class="quote-second">
+                    <div class="quote-group">
+                        <h4>Main Project Goal:</h4>
+                        <select name="project_goal" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="ecom">E-commerce</option>
+                            <option value="portfolio">Portfolio showcase</option>
+                            <option value="services">Services</option>
+                            <option value="other">Something else</option>
+                        </select>
+                    </div>
+                    <div class="quote-group">
+                        <h4>Your Estimated Budget:</h4>
+                        <select name="project_budget" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="ecom">£950 - £1,200</option>
+                            <option value="portfolio">£1,200 - £2,000</option>
+                            <option value="services">£2,000 - £3,500</option>
+                            <option value="other">£3,500+</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <button type="submit" class="btn-primary submit-btn" style="margin: 30px 0 0 0; border: 1.8px solid var(--text-main);">Send Quote</button>
+        </div>
+    </div>
     <script src="css/script.js" defer></script>
 </body>
 </html>
