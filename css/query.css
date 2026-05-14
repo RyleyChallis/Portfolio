@@ -41,6 +41,9 @@
         max-width: 90% !important;
         gap: 20px !important;
     }
+    .package-card:nth-child(2):hover {
+    transform: scale(1) translateY(-10px) !important;
+}
     .package-card .btn-primary {
         width: 100%;
         margin-top: auto;

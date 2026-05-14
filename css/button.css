@@ -5,7 +5,7 @@
     border: 1.8px solid var(--text-main);
     border-radius: 50px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-family: 'inter', sans-serif;
     font-weight: 500;
     transition: all 0.2s ease;
