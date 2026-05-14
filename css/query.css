@@ -201,6 +201,9 @@
     .desktop-only {
         display: none;
     }
+    .mobile-only {
+        display: flex;
+    }
     #gallery .mobile-only {
         margin-bottom: 75px;
     }
