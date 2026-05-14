@@ -123,7 +123,7 @@ nav .logo {
     flex-direction: column !important;
     justify-content: space-between !important;
 
-    height: 100vh !important;
+    height: 100% !important;
     width: 0;
     position: fixed;
     z-index: 10000;
