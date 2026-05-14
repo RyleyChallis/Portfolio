@@ -67,7 +67,7 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(1.4rem, 4vw, 1.5rem);
+    font-size: clamp(1.6rem, 4vw, 1.8rem);
     font-family: 'fraunces', serif;
     color: var(--text-main);
 }
@@ -99,15 +99,17 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
     align-items: flex-start;
+    max-width: 90% !important;
 }
 
 .package-container .package-card {
     display: flex;
     flex-direction: column;
-    max-width: 480px;
-    width: 100%;
+    max-width: 560px;
     min-height: 320px !important;
-    max-height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px;
+    overflow: hidden;
 
     padding: 20px;
     transition: all 0.3s ease;
@@ -118,8 +120,16 @@ h3 {
     background-color: var(--main-white) !important;
 }
 
-.package-card:hover {
+.package-card:nth-child(2) {
+    transform: scale(1.08);
+}
+
+.package-card:not(:nth-child(2)):hover {
     transform: translateY(-10px);
+}
+
+.package-card:nth-child(2):hover {
+    transform: scale(1.08) !important;
 }
 
 .package-card .number {
@@ -138,7 +148,7 @@ h3 {
     flex-direction: column;
     gap: 20px !important;
     margin: 0;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .package-card ul li {
@@ -146,6 +156,7 @@ h3 {
     font-family: 'inter', sans-serif;
     margin: 0 !important;
     padding: 0 !important;
+    list-style-type: disc !important;
 }
 
 .package-card ul li span {
@@ -233,10 +244,13 @@ h3 {
 
 #about .about-image img {
     display: block;
-    max-width: 350px;
+    max-width: 450px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
     height: auto;
     border-radius: 7px;
     background-color: transparent;
+    transition: all 0.3s ease;
 }
 
 .faq-container {
