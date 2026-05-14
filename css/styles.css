@@ -105,10 +105,7 @@ h3 {
 .package-container .package-card {
     display: flex;
     flex-direction: column;
-    max-width: 560px;
-    min-height: 320px !important;
-    min-height: 560px !important;
-    max-height: 560px;
+    min-height: 490px !important;
     overflow: hidden;
 
     padding: 20px;
@@ -143,6 +140,10 @@ h3 {
     margin: 0 0 20px 0;
 }
 
+.package-card h3 span {
+    display: none;
+}
+
 .package-card ul {
     display: flex;
     flex-direction: column;
@@ -160,6 +161,10 @@ h3 {
 }
 
 .package-card ul li span {
+    font-weight: bold;
+}
+
+.package-card li:first-child {
     font-weight: bold;
 }
 
