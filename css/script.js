@@ -147,7 +147,7 @@ form.addEventListener('submit', e => {
     });
 };
 
-const quoteURL = 'https://script.google.com/macros/s/AKfycbwkuW9BNtSa7FWVbBBl9CvQZno7Hxh7XOLCzxslPFck-sid3-_xMeXN44f7MtG4Cfh5gA/exec';
+const quoteURL = 'https://script.google.com/macros/s/AKfycbybbywtTPZn3Gs-tBrFGxrb5s4dmIRs2H8_iONv1O53cgyIRwt-uY75WuVHBSHG9gkx7w/exec';
 const quoteForm = document.getElementById('quote-form');
 
 if (!quoteForm) {
@@ -174,26 +174,24 @@ quoteForm.addEventListener('submit', e => {
         return;
     }
 
-    const submitBtn = form.querySelector('.submit-btn');
+    const submitBtn = quoteForm.querySelector('.submit-btn');
     submitBtn.innerText = "Sending...";
     submitBtn.disabled = true;
 
-    const quoteFormData = new FormData(form);
+    const quoteFormData = new FormData(quoteForm);
 
-    fetch(scriptURL, { method: 'POST', body: quoteFormData })
+    fetch(quoteURL, { method: 'POST', body: quoteFormData })
         .then(response => {
             submitBtn.innerText = "Success!";
-            submitBtn.style.backgroundColor = "#28a745";
-
-            openPopup();
+            submitBtn.style.backgroundColor = "#30b44f"; 
 
             setTimeout(() => {
-                closePopup();
-                form.reset();
+                closeQuotePopup();
+                quoteForm.reset(); 
                 
-                submitBtn.innerText = "Send Inquiry";
+                submitBtn.innerText = "Send Quote";
                 submitBtn.style.backgroundColor = "";
-            }, 6000);
+            }, 2500);
         })
         .catch(error => {
             console.error('Error!', error.message);
@@ -201,7 +199,6 @@ quoteForm.addEventListener('submit', e => {
         })
         .finally(() => {
             submitBtn.disabled = false;
-            console.log("Process Completed.");
         });
-    });
+    })
 };

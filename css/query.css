@@ -121,9 +121,15 @@
     .quote-second {
         align-items: center;
     }
-    .popup-content .quote-group:not(:first-child) {
+    .quote-second .quote-group:first-child {
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+    .quote-second .quote-group:nth-child(2) {
+        display: flex;
+        flex-direction: column !important;
+        align-items: flex-start;
     }
     .popup-content .quote-group:not(:first-child) h4 {
         max-width: 90%;
@@ -137,7 +143,7 @@
         width: 100% !important;
     }
     .quote-second .quote-group select {
-        width: 100%;
+        width: 100% !important;
     }
 }
 
