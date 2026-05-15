@@ -16,6 +16,54 @@
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/query.css">
 
+    <style>
+        #steps {
+            background-color: var(--off-white);
+            min-height: 60vh !important;
+            padding-bottom: 100px;
+            margin: 0;
+        }
+        #steps .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 90%;
+            margin: 0 auto;
+            justify-content: center;
+            gap: 50px;
+        }
+        .steps-grid h3 {
+            font-size: clamp(1.4rem, 4vw, 1.6rem);
+            transition: all 0.3s ease;
+            margin: 0;
+        }
+        .steps-grid .steps-card {
+            max-width: 450px;
+            min-height: 250px;
+            border: 1.8px solid var(--text-main);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+        .steps-card:hover {
+            transform: translateY(-10px);
+            background-color: var(--text-main);
+        }
+        .steps-card:hover h3, .steps-card:hover p {
+            color: var(--main-white);
+        }
+        .steps-card p {
+            text-align: center;
+            transition: all 0.3s ease;
+            padding: 0 20px;
+            margin: 0;
+        }
+    </style>
+
     <!-- <script>
     (function() {
         const urlParams = new URLSearchParams(window.location.search);
@@ -93,15 +141,15 @@
             <div class="steps-grid">
                 <div class="steps-card">
                     <h3>Check your email</h3>
-                    <p>I've sent a deposit receipt to your email.</p>
+                    <p>A deposit receipt and a brief overview of our next steps are waiting in your inbox.</p>
                 </div>
                 <div class="steps-card">
-                    <h3>I'll reach out within 24 hours</h3>
-                    <p>I've sent a deposit receipt to your email.</p>
+                    <h3>What happens next?</h3>
+                    <p>I’ll personally reach out within 24 hours to finalise your project kickoff date.</p>
                 </div>
                 <div class="steps-card">
-                    <h3>While you wait (Optional)</h3>
-                    <p>Download my <a href="">Client Onboarding Guide</a></p>
+                    <h3>Client Portal</h3>
+                    <p>I am currently setting up your secure, password-protected workspace. You will receive your personal access link and credentials in my follow-up email.</p>
                 </div>
             </div>
         </section>
