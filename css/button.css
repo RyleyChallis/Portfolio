@@ -34,10 +34,6 @@ nav .btn-primary:hover {
     filter: brightness(90%);
 }
 
-#process .btn-primary {
-    font-size: 22px;
-}
-
 .cta-two {
     background-color: transparent;
     border: 1.8px solid var(--text-main);

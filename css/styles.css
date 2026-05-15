@@ -233,6 +233,10 @@ h3 {
     color: var(--main-white);
 }
 
+#about p {
+    line-height: 1.6;
+}
+
 #about h2 {
     padding-bottom: 20px;
 }
