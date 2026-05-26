@@ -233,7 +233,7 @@ h3 {
     align-items: flex-start;            
     max-width: 1200px;              
     margin: 0 auto;
-    gap: 80px;                   /* Clean, consistent spacing between items */
+    gap: 80px;
 }
 
 .dev-profile .about-text {
@@ -274,6 +274,7 @@ h3 {
 .details-item {
     display: flex;
     align-items: center !important;
+    justify-content: flex-start;
     gap: 10px;
     margin-bottom: 40px;
 }
