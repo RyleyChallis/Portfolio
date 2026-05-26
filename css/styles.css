@@ -49,6 +49,35 @@ h1 {
     margin-bottom: 50px;
 }
 
+#hero .wifi-notice {
+    background-color: var(--main-yellow);
+    border: 1.8px solid var(--text-main);
+    width: 450px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    transform: rotate(12deg);
+    overflow: hidden;
+
+    margin: 0;
+    padding: 12px 20px;
+}
+
+.wifi-notice i {
+    font-size: 32px;
+    margin: 0;
+}
+
+.wifi-notice h3, .wifi-notice p {
+    margin: 0;
+}
+
 p, li a {
     font-size: clamp(0.9rem, 4vw, 1.1rem);
     font-family: 'inter', sans-serif;
