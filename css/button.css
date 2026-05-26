@@ -34,6 +34,10 @@ nav .btn-primary:hover {
     filter: brightness(90%);
 }
 
+#about .btn-primary {
+    margin: 75px 0;
+}
+
 .cta-two {
     background-color: transparent;
     border: 1.8px solid var(--text-main);

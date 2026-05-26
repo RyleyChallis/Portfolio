@@ -272,7 +272,7 @@
         font-size: 20px;
     }
 
-    p.desktop-only {
+    .desktop-only {
         display: none;
     }
     #about .about-image {
