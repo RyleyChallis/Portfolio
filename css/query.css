@@ -228,7 +228,7 @@
         display: none;
     }
     .mobile-only {
-        display: flex;
+        display: flex !important;
     }
     #gallery .mobile-only {
         margin-bottom: 75px;
