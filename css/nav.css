@@ -16,12 +16,10 @@ nav {
     z-index: 9999;
 }
 
-nav .logo {
-    font-size: 2.3rem;
-    font-family: 'fraunces', serif;
-    font-weight: bold;
-    color: var(--text-main);
-    text-decoration: none;
+nav .logo img {
+    max-width: 200px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links {
