@@ -1,5 +1,17 @@
 
 @media (max-width: 1323px) {
+    .package-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 90% !important;
+    }
+    .package-card:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+    .package-card:nth-child(2) {
+        transform: none;
+    }
     #gallery .gallery-container {
         display: grid;
         grid-template-columns: 1fr !important;
@@ -13,21 +25,6 @@
     }
     .gallery-item {
         scale: 1.15;
-    }
-}
-
-@media (max-width: 1255px) {
-    .package-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 90% !important;
-    }
-    .package-card:last-child {
-        grid-column: 1 / -1;
-        justify-self: center;
-    }
-    .package-card:nth-child(2) {
-        transform: none;
     }
 }
 

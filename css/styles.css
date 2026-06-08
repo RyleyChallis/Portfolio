@@ -49,7 +49,7 @@ h1 {
     margin-bottom: 50px;
 }
 
-p, li a {
+p, li, li a {
     font-size: clamp(0.9rem, 4vw, 1.1rem);
     font-family: 'inter', sans-serif;
     color: var(--text-main);
@@ -89,7 +89,6 @@ h3 {
 #packages {
     display: flex;
     flex-direction: column;
-    padding-bottom: 150px;
     scroll-margin-top: -40px;
     background-color: var(--off-white);
 }
@@ -98,35 +97,26 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
-    align-items: flex-start;
-    max-width: 90% !important;
+    align-items: stretch;
+    gap: 24px;
+
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .package-container .package-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 490px !important;
-    overflow: hidden;
-
-    padding: 20px;
-    transition: all 0.3s ease;
-
-    border-radius: 14px;
-    border: 3px solid var(--text-main);
-    box-shadow: 5px 10px 24px rgba(0, 0, 0, 0.2);
-    background-color: var(--main-white) !important;
-}
-
-.package-card:nth-child(2) {
-    transform: scale(1.08);
-}
-
-.package-card:not(:nth-child(2)):hover {
-    transform: translateY(-10px);
-}
-
-.package-card:nth-child(2):hover {
-    transform: scale(1.08) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes the buttons to the very bottom uniformly */
+  height: 100%; /* Forces card to fill the grid container height */
+  
+  overflow: hidden;
+  padding: 20px 40px;
+  transition: all 0.3s ease;
+  border-radius: 14px;
+  border: 3px solid var(--text-main);
+  box-shadow: 5px 10px 24px rgba(0, 0, 0, 0.2);
+  background-color: var(--main-white) !important;
 }
 
 .package-card .number {
@@ -153,19 +143,14 @@ h3 {
 }
 
 .package-card ul li {
-    font-size: 1rem !important;
-    font-family: 'inter', sans-serif;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style-type: disc !important;
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    line-height: 1.5;
 }
 
-.package-card ul li span {
-    font-weight: bold;
-}
-
-.package-card li:first-child {
-    font-weight: bold;
+.package-card ul li:first-child {
+    list-style: none;
 }
 
 #process {
@@ -231,17 +216,16 @@ h3 {
     flex-direction: row;
     justify-content: center; 
     align-items: center;            
-    max-width: 1200px;              
+    max-width: 98%;              
     margin: 0 auto;
-    gap: 80px;
+    gap: 50px;
 }
 
-.dev-profile .about-text {
-    width: 320px;                 
+.dev-profile .about-text {                 
     text-align: left;
 }
 
-.about-text h3, .details-item p, .details-item h3 {
+.about-text h3 {
     margin: 0;
 }
 
@@ -257,46 +241,12 @@ h3 {
 }
 
 .dev-profile .about-image img {
-    width: 100%;
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid var(--text-main);
     transition: all 0.3s ease;
-}
-
-.dev-profile .about-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.details-item {
-    display: flex;
-    align-items: center !important;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-bottom: 40px;
-}
-
-.about-details .details-icons a {
-    text-decoration: none;
-    color: var(--text-main);
-
-    font-size: 32px;
-    margin: 0;
-    transition: all 0.3s ease;
-}
-
-.details-icons a:hover {
-    color: var(--main-yellow);
-    filter: brightness(90%);
-}
-
-.details-item h3,
-.details-item p {
-    margin: 0 !important;
-    padding: 0;
 }
 
 .faq-container {
