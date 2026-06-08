@@ -371,12 +371,6 @@
 }
 
 @media (hover: hover) {
-    .package-card:hover {
-        transform: translateY(-10px);
-    }
-    .package-card:active {
-        transform: translateY(-10px);
-    }
     .about-image img:hover {
         transform: scale(1.05);
     }

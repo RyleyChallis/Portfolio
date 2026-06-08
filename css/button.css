@@ -40,7 +40,7 @@ nav .btn-primary:hover {
 
 #packages .learn-more-btn {
     width: fit-content;
-    margin: 75px auto;
+    margin: 0 auto;
 }
 
 #about .btn-primary {
