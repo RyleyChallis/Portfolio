@@ -215,9 +215,6 @@
         max-width: 550px !important;
         margin: 0 auto !important;
     }
-    nav .cta {
-        display: none !important;
-    }
     .package-card h3 span {
         display: none;
     }
