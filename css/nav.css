@@ -194,15 +194,16 @@ nav .logo img {
 }
 
 .footer-logo {
-    font-family: 'fraunces', serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--text-main);
-    margin-bottom: 10px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
 }
 
-.footer-logo span {
-    color: var(--main-yellow);
+.footer-logo img {
+    display: block;
+    max-width: 290px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .sidebar-footer p {
