@@ -105,7 +105,7 @@ nav .logo img {
     padding: 0 20px 0 32px;
     margin: 0;
     gap: 12px;
-    
+
     overflow-y: auto;
     z-index: 1000;
     max-width: 90% !important;
@@ -179,7 +179,7 @@ nav .logo img {
 }
 
 .openbtn {
-    font-size: var(--fs-h3);
+    font-size: var(--fs-p);
     cursor: pointer;
 
     background-color: var(--main-white);

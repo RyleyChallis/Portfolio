@@ -24,6 +24,20 @@ html, body {
     --ff-body: 'inter', sans-serif;
 }
 
+.dev-profile, .process-container, .package-container, .faq-container, .footer-container, .legal-container, .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.mobile-only {
+    display: none;
+}
+
 section:nth-child(odd) {
     background-color: var(--main-white);
 }
@@ -57,19 +71,22 @@ h1 {
     font-family: var(--ff-header);
     font-weight: bold;
     color: var(--text-main);
-    max-width: clamp(0, 90vw, 90%);
     margin: 0;
+}
+
+.header-content {
+    margin-right: auto;
 }
 
 #hero p {
     margin-bottom: 50px;
+    max-width: 70%;
 }
 
 p, li, li a {
     font-size: var(--ff-body);
     font-family: var(--ff-body);
     color: var(--text-main);
-    max-width: 750px;
 }
 
 h2 {
@@ -86,20 +103,6 @@ h3 {
     font-size: var(--fs-h3);
     font-family: var(--ff-header);
     color: var(--text-main);
-}
-
-.dev-profile, .process-container, .package-container, .faq-container, .footer-container, .legal-container, .container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.mobile-only {
-    display: none;
 }
 
 #packages {
