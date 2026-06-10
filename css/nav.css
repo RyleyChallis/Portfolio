@@ -97,9 +97,15 @@ nav .logo img {
 }
 
 .sidebar-links {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1 !important;
+    align-items: flex-start;
+
     padding: 0 20px 0 32px;
     margin: 0;
+    gap: 12px;
+    
     overflow-y: auto;
     z-index: 1000;
     max-width: 90% !important;
@@ -118,16 +124,28 @@ nav .logo img {
     letter-spacing: 2px;
 }
 
-.sidebar a, .dropdown-btn {
+.sidebar a {
     font-family: var(--ff-header);
     font-size: var(--fs-h4);
     font-weight: 500;
 
     color: var(--text-main);
     text-decoration: none;
-    padding: 8px 8px 8px 6px;
+    padding: 0px 8px 0px 9px !important;
     display: block;
     transition: all 0.3s ease;
+    border-radius: 7px;
+}
+
+.sidebar .dropdown-btn {
+    font-family: var(--ff-header);
+    font-size: var(--fs-h4);
+    font-weight: 500;
+
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0px 8px 0px 6px !important;
+    display: flex;
     border-radius: 7px;
 }
 
@@ -137,18 +155,16 @@ nav .logo img {
 
 .sidebar .odd-link {
     margin: 0 !important;
+    padding: 0 !important; 
     gap: 0 !important;
 }
 
 .sidebar span i {
     border-radius: 7px;
     margin: 0;
-    padding: 8px;
+    padding: 0;
     transition: all 0.3s ease;
-}
-
-.sidebar span i:hover {
-    background-color: #efefef;
+    background-color: transparent;
 }
 
 .sidebar .closebtn {

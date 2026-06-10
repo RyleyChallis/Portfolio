@@ -2,6 +2,7 @@
     background-color: var(--main-yellow);
     color: var(--text-main);
     padding: 16px 24px !important;
+    
     border: 1.8px solid var(--text-main);
     border-radius: 50px;
     text-decoration: none;
