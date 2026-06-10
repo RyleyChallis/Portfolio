@@ -137,7 +137,7 @@ form.addEventListener('submit', e => {
                 submitBtn.innerText = "Send Inquiry";
                 submitBtn.style.backgroundColor = "";
                 submitBtn.disabled = false;
-            }, 6000);
+            }, 3000);
         })
         .catch(error => {
             console.error('Error!', error.message);
