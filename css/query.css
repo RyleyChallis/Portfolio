@@ -144,15 +144,18 @@
     }
 }
 
+@media (max-width: 816px) {
+    nav .nav-links-second .cta-two {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     html body p, ul li {
         font-size: 1rem !important;
     }
     .nav-links-second {
         gap: 10px !important;
-    }
-    .cta-two {
-        display: none;
     }
     .openbtn {
         padding: 6px 12px;
@@ -252,6 +255,9 @@
 }
 
 @media (max-width: 572px) {
+    nav .nav-links-second .btn-primary {
+        display: none;
+    }
     .dashboard .final-links {
         grid-template-columns: 1fr !important;
     }
