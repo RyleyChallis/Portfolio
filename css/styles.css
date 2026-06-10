@@ -13,6 +13,13 @@ html, body {
     --main-white: #faf8f8;
     --off-white: #f5f0f0;
     --text-main: #333;
+
+    --fs-h1: clamp(2.4rem, 6vw, 3.5rem);
+    --fs-h2: clamp(2rem, 4vw, 2.4rem);
+    --fs-h3: clamp(1.6rem, 4vw, 1.8rem);
+
+    --ff-header: 'fraunces', serif;
+    --ff-body: 'inter', sans-serif;
 }
 
 section:nth-child(odd) {
@@ -44,8 +51,8 @@ section:nth-child(even) {
 }
 
 h1 {
-    font-size: clamp(2.4rem, 6vw, 3.5rem);
-    font-family: 'fraunces', serif;
+    font-size: var(--fs-h1);
+    font-family: var(--ff-header);
     font-weight: bold;
     color: var(--text-main);
     max-width: clamp(0, 90vw, 90%);
@@ -57,15 +64,15 @@ h1 {
 }
 
 p, li, li a {
-    font-size: clamp(0.9rem, 4vw, 1.1rem);
-    font-family: 'inter', sans-serif;
+    font-size: var(--ff-body);
+    font-family: var(--ff-body);
     color: var(--text-main);
     max-width: 750px;
 }
 
 h2 {
-    font-size: clamp(2rem, 4vw, 2.4rem);
-    font-family: 'fraunces', serif;
+    font-size: var(--fs-h2);
+    font-family: var(--ff-header);
     font-weight: bold;
     color: var(--text-main);
     text-align: center;
@@ -74,8 +81,8 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(1.6rem, 4vw, 1.8rem);
-    font-family: 'fraunces', serif;
+    font-size: var(--fs-h3);
+    font-family: var(--ff-header);
     color: var(--text-main);
 }
 
@@ -129,12 +136,12 @@ h3 {
 
 .package-card .number {
     font-size: 0.8rem;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     opacity: 0.6;
 }
 
 .package-card h3 {
-    font-family: 'fraunces', serif;
+    font-family: var(--ff-header);
     margin: 0 0 20px 0;
 }
 
@@ -210,7 +217,7 @@ h3 {
 
 .process-card p {
     font-size: 1rem;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     color: var(--text-main);
 }
 
@@ -356,7 +363,7 @@ h3 {
 
 .legal-points li {
     font-size: 1rem;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
 }
 
 footer {
@@ -381,7 +388,7 @@ footer .intro {
 
 footer .intro h2 {
     font-size: clamp(1.8rem, 6vw, 2.2rem);
-    font-family: 'fraunces', serif;
+    font-family: var(--ff-header);
     color: var(--main-white);
     
     margin: 0;
@@ -395,7 +402,7 @@ footer .intro h2 span {
 
 footer .intro p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     color: var(--main-white);
     margin: 0;
     padding: 0;
@@ -422,7 +429,7 @@ footer .footer-container {
 
 .footer-col h3 {
     font-size: clamp(1.2rem, 2vw, 1.4rem) !important;
-    font-family: 'fraunces', serif;
+    font-family: var(--ff-header);
     color: var(--main-yellow);
 
     margin: 0 0 10px 0;
@@ -441,7 +448,7 @@ footer .footer-container {
 
 .footer-col ul li a {
     font-size: clamp(0.9rem, 4vw, 1rem);
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     color: #aeaeae;
 
     margin: 0;
@@ -467,7 +474,7 @@ footer .footer-bottom {
 
 .footer-bottom p {
     font-size: 0.9rem;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     color: #676767;
 }
 
@@ -517,14 +524,14 @@ footer .footer-bottom {
 
 .popup-content h4 {
     font-size: clamp(1rem, 2vw, 1.1rem);
-    font-family: 'fraunces', serif;
+    font-family: var(--ff-header);
     color: var(--text-main);
     margin: 0;
 }
 
 .popup-content p {
     font-size: 1rem;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
 }
 
 #quote-form {
@@ -558,7 +565,7 @@ input[type="email"] {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     font-size: 1rem;
 }
 
@@ -571,7 +578,7 @@ input[type="email"] {
     border-radius: 8px;
     background-color: #f9f9f9;
     color: #404040;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     font-size: clamp(0.9rem, 2vw, 1rem);
 
     display: flex;

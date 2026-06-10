@@ -39,10 +39,12 @@ nav .logo img {
     text-decoration: none;
     color: var(--text-main);
     font-weight: 500;
-    font-size: 1.1rem;
-    font-family: 'inter', sans-serif;
+
+    font-size: var(--fs-p);
+    font-family: var(--ff-body);
     padding: 14px 16px;
     border-radius: 50px;
+
     position: relative;
     transition: all 0.3s ease;
     line-height: 1 !important;
@@ -111,15 +113,16 @@ nav .logo img {
     color: #888;
     padding: 20px 8px 0 0;
     margin: 0;
-    font-family: 'inter', sans-serif;
-    font-size: 0.85rem;
+    font-family: var(--ff-body);
+    font-size: var(--fs-h3);
     letter-spacing: 2px;
 }
 
 .sidebar a, .dropdown-btn {
-    font-family: 'fraunces', serif;
-    font-size: 1.3rem;
+    font-family: var(--ff-header);
+    font-size: var(--fs-p);
     font-weight: 500;
+
     color: var(--text-main);
     text-decoration: none;
     padding: 8px 8px 8px 6px;
@@ -149,10 +152,10 @@ nav .logo img {
 }
 
 .sidebar .closebtn {
-    display: flex;          /* Or inline-flex */
-    padding: 20px;          /* This now expands the clickable area */
+    display: flex;
+    padding: 20px;
     cursor: pointer;
-    border: none;           /* Removes default button styling */
+    border: none;
     background: transparent;
 
     margin-left: auto;
@@ -160,7 +163,7 @@ nav .logo img {
 }
 
 .openbtn {
-    font-size: 22px;
+    font-size: var(--fs-h3);
     cursor: pointer;
 
     background-color: var(--main-white);
@@ -208,8 +211,8 @@ nav .logo img {
 }
 
 .sidebar-footer p {
-    font-family: 'inter', sans-serif;
-    font-size: 0.8rem;
+    font-family: var(--ff-header);
+    font-size: var(--fs-p);
     color: #666;
     margin: 0;
     white-space: nowrap;
@@ -245,7 +248,7 @@ nav .logo img {
     width: fit-content;
     text-align: left;
     cursor: pointer;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     transition: 0.3s;
 }
 
@@ -264,7 +267,7 @@ nav .logo img {
 }
 
 .dropdown-content a {
-    font-family: 'inter', sans-serif !important;
+    font-family: var(--ff-body) !important;
     font-size: 1.1rem !important;
     font-style: italic;
     font-weight: 400 !important;
@@ -309,5 +312,5 @@ nav .logo img {
     justify-content: center;
     border-radius: 50px;
     font-size: 22px;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
 }

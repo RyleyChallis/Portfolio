@@ -71,9 +71,6 @@
         display: block !important;
         margin: 0 auto !important;
     }
-    p {
-        font-size: 1rem !important;
-    }
     .project-image {
         display: flex;
         justify-content: center;
@@ -151,9 +148,6 @@
 }
 
 @media (max-width: 768px) {
-    html body p, ul li {
-        font-size: 1rem !important;
-    }
     .nav-links-second {
         gap: 10px !important;
     }
@@ -168,7 +162,6 @@
         max-width: 100% !important;
     }
     .faq-section div.faq-card .faq-question {
-        font-size: 1.1rem !important;
         max-width: none;
     }
     .faq-question::after {
@@ -239,9 +232,6 @@
     #gallery .gallery-item {
         width: 450px !important; 
     }
-    #final h2 {
-        font-size: 2.8rem !important;
-    }
     .footer-bottom {
         display: flex !important;
         flex-direction: column !important;
@@ -286,32 +276,17 @@
         aspect-ratio: 16 / 9;
         object-fit: cover;
     }
-    .popup-content h3 {
-        font-size: 2rem;
-    }
     footer.footer .intro {
         max-width: 80%;
     }
     footer.footer .container .footer-container .footer-links {
         display: flex;
     }
-    .footer-links h3 {
-        font-size: 1.1rem;
-    }
-    .footer-links li a {
-        font-size: 1rem !important;
-    }
     .sidebar {
         max-width: 80% !important;
     }
     #gallery .gallery-item {
         width: 350px !important; 
-    }
-    body #gallery .gallery-item div.soon {
-        font-size: 1.2rem !important;
-    }
-    h2 {
-        font-size: 1.8rem !important;
     }
     .summary-row {
         display: flex !important;
