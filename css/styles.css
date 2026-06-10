@@ -241,16 +241,15 @@ h3 {
     flex-direction: row;
     justify-content: center; 
     align-items: center;            
-    max-width: 98%;              
+    max-width: 80%;              
     margin: 0 auto;
-    gap: 50px;
 }
 
 .dev-profile .about-text {                 
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 .about-text h3 {
@@ -269,12 +268,20 @@ h3 {
 }
 
 .dev-profile .about-image img {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid var(--text-main);
     transition: all 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: translateY(-10px) !important;
+}
+
+#faqs {
+    padding-bottom: 50px;
 }
 
 .faq-container {
@@ -286,6 +293,7 @@ h3 {
   border-radius: 7px;
   transition: all 0.3s ease;
   padding: 10px 0 10px 20px;
+  width: 100%;
 }
 
 .faq-card:hover {
@@ -295,6 +303,10 @@ h3 {
 .faq-card:hover .faq-question::after {
     background-color: var(--main-yellow);
     filter: brightness(110%) !important;
+}
+
+.faq-card:last-child {
+    border: none;
 }
 
 .faq-card.active {
@@ -353,6 +365,7 @@ h3 {
   padding-bottom: 20px;
   color: var(--text-main);
   line-height: 1.6;
+  max-width: 95%;
 }
 
 .legal-page p {
@@ -610,4 +623,9 @@ input[type="email"] {
 .popup-content button.close-btn:hover {
     transform: scale(1.15) rotate(-32deg);
     filter: brightness(90%);
+}
+
+.packages-page section:not(#hero) {
+    min-height: auto;
+    padding-bottom: 50px;
 }

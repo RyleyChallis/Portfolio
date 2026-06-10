@@ -2,13 +2,15 @@
     background-color: var(--main-yellow);
     color: var(--text-main);
     padding: 16px 24px !important;
-    
+
     border: 1.8px solid var(--text-main);
     border-radius: 50px;
     text-decoration: none;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
+
+    font-size: var(--fs-p);
     font-family: 'inter', sans-serif;
     font-weight: 500;
+
     transition: all 0.2s ease;
     cursor: pointer;
     white-space: nowrap !important;
@@ -52,12 +54,15 @@ nav .btn-primary:hover {
     position: relative;
     overflow: hidden;
     align-items: flex-start;
+  
     background-color: var(--main-white);
     color: var(--text-main);
+    
     padding: 16px 24px !important;
     border: 1.8px solid var(--text-main);
     border-radius: 50px;
-    font-size: 22px;
+    font-size: var(--fs-p);
+    
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -72,7 +77,7 @@ nav .btn-primary:hover {
 .btn-secondary {
     background: transparent;
     color: var(--text-main);
-    font-size: 20px;
+    font-size: var(--fs-p);
 
     text-decoration: none;
     transition: all 0.3s ease;
