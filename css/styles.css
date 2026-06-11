@@ -94,7 +94,6 @@ p, li, li a {
 h2 {
     font-size: var(--fs-h2);
     font-family: var(--ff-header);
-    font-weight: bold;
     color: var(--text-main);
     text-align: center;
     padding: 75px 0;
@@ -386,15 +385,9 @@ footer .intro {
     gap: 10px;
 }
 
-footer .intro h2 {
-    font-size: var(--fs-h3);
-    font-family: var(--ff-header);
-    color: var(--main-white);
-    
-    margin: 0;
-    padding: 0;
-    text-align: left;
-} 
+footer .intro h2 img {
+    max-width: 380px;
+}
 
 footer .intro p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
