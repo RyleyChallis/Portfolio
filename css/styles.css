@@ -385,8 +385,15 @@ footer .intro {
     gap: 10px;
 }
 
+footer .intro h2 {
+    padding-bottom: 0;
+    display: flex;
+    margin-right: auto;
+    width: 100%;
+}
+
 footer .intro h2 img {
-    max-width: 380px;
+    max-width: 340px;
 }
 
 footer .intro p {
