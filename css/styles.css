@@ -8,43 +8,6 @@ html, body {
     box-sizing: border-box;
 }
 
-:root {
-    --main-yellow: #faef1a;
-    --main-white: #faf8f8;
-    --off-white: #f5f0f0;
-    --text-main: #333;
-
-    --fs-h1: clamp(2.4rem, 6vw, 3.5rem);
-    --fs-h2: clamp(2rem, 4vw, 2.4rem);
-    --fs-h3: clamp(1.6rem, 4vw, 1.8rem);
-    --fs-h4: clamp(1.2rem, 4vw, 1.4rem);
-    --fs-p: clamp(1rem, 2vw, 1.1rem);
-
-    --ff-header: 'fraunces', serif;
-    --ff-body: 'inter', sans-serif;
-}
-
-.dev-profile, .process-container, .package-container, .faq-container, .footer-container, .legal-container, .container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.mobile-only {
-    display: none;
-}
-
-section:nth-child(odd) {
-    background-color: var(--main-white) !important;
-}
-section:nth-child(even) {
-    background-color: var(--off-white) !important;
-}
-
 #hero, section {
     min-height: 100vh;
     width: 100%;
@@ -54,8 +17,62 @@ section:nth-child(even) {
     padding: 0;
 }
 
-#hero {
-    padding-left: 40px;
+:root {
+    --main-yellow: #faef1a;
+    --main-white: #faf8f8;
+    --off-white: #f5f0f0;
+    --text-main: #333;
+
+    --fs-h1: clamp(2.4rem, 6vw, 3.5rem);
+    --fs-h2: clamp(2rem, 4vw, 2.4rem);
+    --fs-h3: clamp(1.6rem, 4vw, 1.8rem);
+    --fs-p: clamp(1rem, 2vw, 1.2rem);
+
+    --ff-header: 'fraunces', serif;
+    --ff-body: 'inter', sans-serif;
+}
+
+section:nth-child(odd) {
+    background-color: var(--main-white);
+}
+section:nth-child(even) {
+    background-color: var(--off-white);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    font-family: var(--ff-header);
+    font-weight: bold;
+    color: var(--text-main);
+    text-align: center;
+    padding: 75px 0;
+    margin: 0 auto !important;
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    font-family: var(--ff-header);
+    color: var(--text-main);
+    margin: 0;
+}
+
+p {
+    font-size: var(--ff-body);
+    font-family: var(--ff-body);
+    color: var(--text-main);
+    max-width: 750px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+#tipsy .container, #broadway .container, .footer-container, .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 #hero {
@@ -66,29 +83,37 @@ section:nth-child(even) {
     padding: 0 40px;
 }
 
-h1 {
+#hero .subtitle {
+    font-size: var(--fs-p);
+    font-family: var(--ff-body);
+    color: var(--text-main);
+    max-width: 80%;
+    text-align: left;
+    margin-bottom: 1px;
+}
+
+#hero h1 {
     font-size: var(--fs-h1);
     font-family: var(--ff-header);
     font-weight: bold;
     color: var(--text-main);
+    max-width: clamp(0, 90vw, 90%);
     margin: 0;
-}
-
-.header-content {
-    margin-right: auto;
 }
 
 #hero p {
-    margin-bottom: 50px;
-    max-width: 70%;
-}
-
-p, li, li a {
-    font-size: var(--ff-body);
+    font-size: var(--fs-p);
     font-family: var(--ff-body);
     color: var(--text-main);
-    line-height: 1.6 !important;
-    margin: 0;
+    max-width: 80%;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+#hero .mobile-only {
+    display: none;
 }
 
 h2 {
@@ -383,6 +408,7 @@ footer .intro {
 
     max-width: 550px;
     gap: 10px;
+    margin-top: -75px;
 }
 
 footer .intro h2 {
@@ -393,14 +419,15 @@ footer .intro h2 {
 }
 
 footer .intro h2 img {
-    max-width: 340px;
+    max-width: 260px;
+    margin-left: -50px;
 }
 
 footer .intro p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-family: var(--ff-body);
     color: var(--main-white);
-    margin: 0;
+    margin: -50px 0 0 0;
     padding: 0;
 }
 
@@ -409,6 +436,7 @@ footer .footer-container {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    max-width: 90% !important;
 }
 
 .footer-container .footer-links {
@@ -424,15 +452,19 @@ footer .footer-container {
 }
 
 .footer-col h3 {
-    font-size: var(--fs-h4);
+    font-size: clamp(1.2rem, 2vw, 1.4rem) !important;
+    font-family: var(--ff-header);
     color: var(--main-yellow);
+
+    margin: 0 0 10px 0;
+    padding: 0;
 }
 
 .footer-col ul {
     display: flex;
     flex-direction: column;
 
-    gap: 10px;
+    gap: 18px;
     margin: 0;
     padding: 0;
     list-style: none;

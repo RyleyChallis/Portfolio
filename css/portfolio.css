@@ -460,29 +460,29 @@ footer .container {
 footer .intro {
     display: flex;
     flex-direction: column;
+
     max-width: 550px;
     gap: 10px;
+    margin-top: -75px;
 }
 
 footer .intro h2 {
-    font-size: clamp(1.8rem, 6vw, 2.2rem);
-    font-family: var(--ff-header);
-    color: var(--main-white);
-    
-    margin: 0 !important;
-    padding: 0;
-    text-align: left !important;
-} 
+    padding-bottom: 0;
+    display: flex;
+    margin-right: auto;
+    width: 100%;
+}
 
-footer .intro h2 span {
-    color: var(--main-yellow);
+footer .intro h2 img {
+    max-width: 260px;
+    margin-left: -50px;
 }
 
 footer .intro p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-family: var(--ff-body);
     color: var(--main-white);
-    margin: 0;
+    margin: -50px 0 0 0;
     padding: 0;
 }
 
@@ -491,6 +491,7 @@ footer .footer-container {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    max-width: 90% !important;
 }
 
 .footer-container .footer-links {
