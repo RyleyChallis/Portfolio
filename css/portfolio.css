@@ -53,6 +53,7 @@ h3 {
     font-size: var(--fs-h3);
     font-family: var(--ff-header);
     color: var(--text-main);
+    margin: 0;
 }
 
 p {
@@ -470,7 +471,7 @@ footer .intro h2 {
     
     margin: 0 !important;
     padding: 0;
-    text-align: left;
+    text-align: left !important;
 } 
 
 footer .intro h2 span {
@@ -505,7 +506,7 @@ footer .footer-container {
 }
 
 .footer-col h3 {
-    font-size: clamp(1.2rem, 4vw, 1.3rem);
+    font-size: clamp(1.2rem, 2vw, 1.4rem) !important;
     font-family: var(--ff-header);
     color: var(--main-yellow);
 
@@ -517,7 +518,7 @@ footer .footer-container {
     display: flex;
     flex-direction: column;
 
-    gap: 10px;
+    gap: 18px;
     margin: 0;
     padding: 0;
     list-style: none;

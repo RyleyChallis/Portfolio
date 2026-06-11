@@ -355,10 +355,6 @@ h3 {
   transform: rotate(45deg);
 }
 
-.faq-card.active:last-child {
-    margin-bottom: 75px;
-}
-
 .faq-answer {
   max-height: 0;
   overflow: hidden;
