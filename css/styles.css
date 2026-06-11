@@ -32,39 +32,6 @@ html, body {
     --ff-body: 'inter', sans-serif;
 }
 
-section:nth-child(odd) {
-    background-color: var(--main-white);
-}
-section:nth-child(even) {
-    background-color: var(--off-white);
-}
-
-h2 {
-    font-size: var(--fs-h2);
-    font-family: var(--ff-header);
-    font-weight: bold;
-    color: var(--text-main);
-    text-align: center;
-    padding: 75px 0;
-    margin: 0 auto !important;
-}
-
-h3 {
-    font-size: var(--fs-h3);
-    font-family: var(--ff-header);
-    color: var(--text-main);
-    margin: 0;
-}
-
-p {
-    font-size: var(--ff-body);
-    font-family: var(--ff-body);
-    color: var(--text-main);
-    max-width: 750px;
-    margin: 0;
-    line-height: 1.6;
-}
-
 #tipsy .container, #broadway .container, .footer-container, .container {
     display: flex;
     flex-direction: column;
@@ -75,45 +42,29 @@ p {
     margin: 0 auto;
 }
 
-#hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 40px;
+section:nth-child(odd) {
+    background-color: var(--main-white);
+}
+section:nth-child(even) {
+    background-color: var(--off-white);
 }
 
-#hero .subtitle {
-    font-size: var(--fs-p);
-    font-family: var(--ff-body);
+p, li, li a {
+    font-size: var(--ff-body);
+    font-family: var(--ff-body) !important;
     color: var(--text-main);
-    max-width: 80%;
-    text-align: left;
-    margin-bottom: 1px;
+    max-width: 750px;
+    margin: 0;
+    line-height: 1.6;
 }
 
-#hero h1 {
+h1 {
     font-size: var(--fs-h1);
     font-family: var(--ff-header);
     font-weight: bold;
     color: var(--text-main);
     max-width: clamp(0, 90vw, 90%);
     margin: 0;
-}
-
-#hero p {
-    font-size: var(--fs-p);
-    font-family: var(--ff-body);
-    color: var(--text-main);
-    max-width: 80%;
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    line-height: 1.4;
-}
-
-#hero .mobile-only {
-    display: none;
 }
 
 h2 {
@@ -130,6 +81,34 @@ h3 {
     font-family: var(--ff-header);
     color: var(--text-main);
     margin: 0 0 20px 0;
+}
+
+p {
+    font-size: var(--ff-body);
+    font-family: var(--ff-body);
+    color: var(--text-main);
+    max-width: 750px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+#hero p {
+    max-width: 80%;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#hero .mobile-only {
+    display: none;
 }
 
 #packages {
