@@ -57,7 +57,7 @@ h3 {
 
 p {
     font-size: var(--ff-body);
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     color: var(--text-main);
     max-width: 750px;
     margin: 0;
@@ -284,7 +284,7 @@ p {
 
 label {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--ff-body);
     font-weight: 600;
     margin-bottom: 10px;
     color: #333;
@@ -296,7 +296,7 @@ textarea {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--ff-body);
     resize: vertical;
     display: block;
 }
@@ -308,7 +308,7 @@ select {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--ff-body);
     font-size: 1rem;
     color: #333;
 
@@ -331,7 +331,7 @@ select:focus {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--ff-body);
     font-size: 0.95rem;
 }
 
@@ -354,7 +354,7 @@ select:focus {
 }
 
 .secure-note {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--ff-body);
     font-size: 0.85rem;
     color: #888;
     text-align: center;
@@ -369,7 +369,7 @@ input[type="email"] {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--ff-body);
     font-size: 1rem;
 }
 
@@ -440,7 +440,7 @@ input:focus {
 
 .popup-content p {
     font-size: 1rem;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
 }
 
 footer {
@@ -479,7 +479,7 @@ footer .intro h2 span {
 
 footer .intro p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     color: var(--main-white);
     margin: 0;
     padding: 0;
@@ -525,7 +525,7 @@ footer .footer-container {
 
 .footer-col ul li a {
     font-size: clamp(0.9rem, 4vw, 1rem);
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     color: #aeaeae;
 
     margin: 0;
@@ -551,6 +551,6 @@ footer .footer-bottom {
 
 .footer-bottom p {
     font-size: 0.9rem;
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     color: #676767;
 }

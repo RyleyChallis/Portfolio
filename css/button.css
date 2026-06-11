@@ -8,7 +8,7 @@
     text-decoration: none;
 
     font-size: var(--fs-p);
-    font-family: 'inter', sans-serif;
+    font-family: var(--ff-body);
     font-weight: 500;
 
     transition: all 0.2s ease;
@@ -78,6 +78,7 @@ nav .btn-primary:hover {
     background: transparent;
     color: var(--text-main);
     font-size: var(--fs-p);
+    font-family: var(--ff-body);
 
     text-decoration: none;
     transition: all 0.3s ease;
@@ -86,9 +87,4 @@ nav .btn-primary:hover {
 
 .btn-secondary i {
     margin-left: 10px;
-}
-
-.btn-secondary:hover {
-    filter: brightness(90%) !important;
-    border: 1.8px solid var(--text-main);
 }
