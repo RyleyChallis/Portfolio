@@ -50,8 +50,8 @@ section:nth-child(even) {
 }
 
 p, li, li a {
-    font-size: var(--ff-body);
-    font-family: var(--ff-body) !important;
+    font-size: var(--fs-p);
+    font-family: var(--ff-body);
     color: var(--text-main);
     max-width: 750px;
     margin: 0;
@@ -81,15 +81,6 @@ h3 {
     font-family: var(--ff-header);
     color: var(--text-main);
     margin: 0 0 20px 0;
-}
-
-p {
-    font-size: var(--ff-body);
-    font-family: var(--ff-body);
-    color: var(--text-main);
-    max-width: 750px;
-    margin: 0;
-    line-height: 1.6;
 }
 
 #hero {
