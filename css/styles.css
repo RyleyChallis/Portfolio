@@ -39,10 +39,10 @@ html, body {
 }
 
 section:nth-child(odd) {
-    background-color: var(--main-white);
+    background-color: var(--main-white) !important;
 }
 section:nth-child(even) {
-    background-color: var(--off-white);
+    background-color: var(--off-white) !important;
 }
 
 #hero, section {
