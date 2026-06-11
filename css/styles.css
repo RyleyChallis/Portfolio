@@ -17,8 +17,8 @@ html, body {
     --fs-h1: clamp(2.4rem, 6vw, 3.5rem);
     --fs-h2: clamp(2rem, 4vw, 2.4rem);
     --fs-h3: clamp(1.6rem, 4vw, 1.8rem);
-    --fs-h4: clamp(1.2rem, 4vw, 1.3rem);
-    --fs-p: clamp(1rem, 2vw, 1.2rem);
+    --fs-h4: clamp(1.2rem, 4vw, 1.4rem);
+    --fs-p: clamp(1rem, 2vw, 1.1rem);
 
     --ff-header: 'fraunces', serif;
     --ff-body: 'inter', sans-serif;
@@ -87,7 +87,7 @@ p, li, li a {
     font-size: var(--ff-body);
     font-family: var(--ff-body);
     color: var(--text-main);
-    line-height: 1.6;
+    line-height: 1.6 !important;
     margin: 0;
 }
 
@@ -105,7 +105,7 @@ h3 {
     font-size: var(--fs-h3);
     font-family: var(--ff-header);
     color: var(--text-main);
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 #packages {
@@ -146,15 +146,6 @@ h3 {
     font-size: 0.8rem;
     font-family: var(--ff-body);
     opacity: 0.6;
-}
-
-.package-card h3 {
-    font-family: var(--ff-header);
-    margin: 0 0 20px 0;
-}
-
-.package-card h3 span {
-    display: none;
 }
 
 .package-card ul {
@@ -199,6 +190,7 @@ h3 {
     max-width: 850px;
     display: flex;
     flex-direction: column;
+    padding: 30px 0;
 
     justify-content: center;
     border-bottom: 1.8px solid var(--text-main);
@@ -211,17 +203,6 @@ h3 {
 .process-card:nth-child(2) {
     margin-left: auto !important;
     justify-content: flex-end !important;
-}
-
-.process-card h3 {
-    font-size: 1.4rem;
-    font-family: 'fraunces', sans-serif;
-    color: var(--text-main);
-    margin: 0;
-}
-
-.process-card h3 span {
-    font-weight: bold;
 }
 
 .process-card p {
@@ -254,10 +235,6 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.about-text h3 {
-    margin: 0;
 }
 
 .about-text p a {
@@ -404,12 +381,13 @@ footer .container {
 footer .intro {
     display: flex;
     flex-direction: column;
+
     max-width: 550px;
     gap: 10px;
 }
 
 footer .intro h2 {
-    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    font-size: var(--fs-h3);
     font-family: var(--ff-header);
     color: var(--main-white);
     
@@ -417,10 +395,6 @@ footer .intro h2 {
     padding: 0;
     text-align: left;
 } 
-
-footer .intro h2 span {
-    color: var(--main-yellow);
-}
 
 footer .intro p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
@@ -450,12 +424,8 @@ footer .footer-container {
 }
 
 .footer-col h3 {
-    font-size: clamp(1.2rem, 2vw, 1.4rem) !important;
-    font-family: var(--ff-header);
+    font-size: var(--fs-h4);
     color: var(--main-yellow);
-
-    margin: 0 0 10px 0;
-    padding: 0;
 }
 
 .footer-col ul {
@@ -535,13 +505,6 @@ footer .footer-bottom {
 
 .popup-overlay.active .popup-content {
     transform: translateY(0) scale(1);
-}
-
-.popup-content h3 {
-    font-size: 2.4rem;
-    margin-bottom: 15px;
-    color: var(--text-main);
-    font-weight: 700;
 }
 
 .popup-content h4 {
