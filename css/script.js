@@ -99,7 +99,7 @@ if (!form) {
 form.addEventListener('submit', e => {
     e.preventDefault();
 
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
     let firstInvalidInput = null;
 
     inputs.forEach(input => {
@@ -156,7 +156,7 @@ if (!quoteForm) {
 quoteForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    const inputs = quoteForm.querySelectorAll('input[required], textarea[required]');
+    const inputs = quoteForm.querySelectorAll('input[required], textarea[required], select[required]');
     let firstInvalidInput = null;
 
     inputs.forEach(input => {

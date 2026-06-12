@@ -243,8 +243,8 @@ h3 {
 }
 
 .dev-profile .about-image img {
-    width: 280px;
-    height: 280px;
+    width: 40vw;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid var(--text-main);
