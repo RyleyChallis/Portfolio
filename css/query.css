@@ -1,17 +1,5 @@
 
 @media (max-width: 1323px) {
-    .package-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 90% !important;
-    }
-    .package-card:last-child {
-        grid-column: 1 / -1;
-        justify-self: center;
-    }
-    .package-card:nth-child(2) {
-        transform: none;
-    }
     #gallery .gallery-container {
         display: grid;
         grid-template-columns: 1fr !important;
@@ -31,19 +19,6 @@
 @media (max-width: 1078px) {
     .nav-links-first {
         display: none;
-    }
-    .package-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 90% !important;
-        gap: 20px !important;
-    }
-    .package-card:nth-child(2):hover {
-    transform: scale(1) translateY(-10px) !important;
-}
-    .package-card .btn-primary {
-        width: 100%;
-        margin-top: auto;
     }
     #about div.about-container {
         display: flex !important;
@@ -100,44 +75,13 @@
     }
 }
 
-@media (max-width: 879px) {
-    .dashboard #final {
-        padding-bottom: 75px;
-    }
-    .dashboard #final .final-links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .dashboard .final-links .final-card:last-child {
-        grid-column: 1 / -1;
-        justify-self: center;
-    }
-    .quote-second {
-        align-items: center;
-    }
-    .quote-second .quote-group:first-child {
-        display: flex;
+@media (max-width: 850px) {
+    .dev-profile {
         flex-direction: column !important;
-        align-items: flex-start;
+        gap: 50px !important;
     }
-    .quote-second .quote-group:nth-child(2) {
-        display: flex;
-        flex-direction: column !important;
-        align-items: flex-start;
-    }
-    .popup-content .quote-group:not(:first-child) h4 {
-        max-width: 90%;
-    }
-    .quote-second {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
-    }
-    .quote-second .quote-group {
-        width: 100% !important;
-    }
-    .quote-second .quote-group select {
-        width: 100% !important;
+    .about-text {
+        gap: 50px !important;
     }
 }
 
@@ -150,16 +94,6 @@
 @media (max-width: 768px) {
     .nav-links-second {
         gap: 10px !important;
-    }
-    .openbtn {
-        padding: 6px 12px;
-    }
-    .package-container {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    .package-card {
-        max-width: 100% !important;
     }
     .faq-section div.faq-card .faq-question {
         max-width: none;
@@ -181,28 +115,9 @@
     #summary {
         padding-bottom: 50px;
     }
-    .dashboard .summary-row {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 50px 0;
-        margin: 0 auto;
-        justify-content: center;
-    }
     .summary-item:last-child {
         grid-column: 1 / -1;
         justify-self: center;
-    }
-    .dashboard ul {
-        gap: 75px;
-    }
-    .dashboard li {
-        flex-direction: column !important;
-    }
-    .dashboard .goals {
-        display: flex;
-        flex-direction: column;
-        margin: 75px auto 0 auto;
-        gap: 50px;
     }
 }
 
@@ -210,9 +125,6 @@
     html body h2 {
         max-width: 550px !important;
         margin: 0 auto !important;
-    }
-    .package-card h3 span {
-        display: none;
     }
     .desktop-only {
         display: none;
@@ -222,9 +134,6 @@
     }
     #gallery .mobile-only {
         margin-bottom: 75px;
-    }
-    #packages ul li:first-child {
-        display: none;
     }
     .faq-answer {
         max-width: 95% !important;
@@ -248,20 +157,12 @@
     nav .nav-links-second .btn-primary {
         display: none;
     }
-    .dashboard .final-links {
-        grid-template-columns: 1fr !important;
-    }
 }
 
 @media (max-width: 526px) {
     #hero {
         padding-bottom: 75px;
     }
-    .openbtn {
-        padding: 8px 12px !important;
-        font-size: 20px;
-    }
-
     .desktop-only {
         display: none;
     }
@@ -298,32 +199,6 @@
     .summary-item i:active {
         transform: scale(1.15) rotate(-30deg);
     }
-    .more-text {
-        display: none;
-    }
-    .read-more-label {
-        display: block;
-        color: #000;
-        text-decoration: underline;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 5px;
-    }
-    .read-more-label::before {
-        content: "Read more...";
-    }
-    #read-more-check:checked ~ .subtitle .more-text {
-        display: inline;
-    }
-    #read-more-check:checked ~ .read-more-label::before {
-        content: "Read less";
-    }
-    #read-more-check {
-        display: none;
-    }
-    .dashboard ul li b {
-        white-space: normal;
-    }
 }
 
 @media (max-width: 451px) {
@@ -339,12 +214,6 @@
         justify-content: center;
         text-align: center;
         gap: 75px;
-    }
-}
-
-@media (max-width: 399px) {
-    .package-container .package-card:last-child {
-        padding-bottom: 20px !important;
     }
 }
 

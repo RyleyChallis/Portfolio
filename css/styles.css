@@ -32,7 +32,7 @@ html, body {
     --ff-body: 'inter', sans-serif;
 }
 
-#tipsy .container, #broadway .container, .footer-container, .container {
+#tipsy .container, #broadway .container, .footer-container, .container, .process-container, .faq-container {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -110,10 +110,9 @@ h3 {
 }
 
 .package-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: stretch;
     gap: 24px;
 
     max-width: 90%;
@@ -121,18 +120,19 @@ h3 {
 }
 
 .package-container .package-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Pushes the buttons to the very bottom uniformly */
-  height: 100%; /* Forces card to fill the grid container height */
-  
-  overflow: hidden;
-  padding: 20px 40px;
-  transition: all 0.3s ease;
-  border-radius: 14px;
-  border: 3px solid var(--text-main);
-  box-shadow: 5px 10px 24px rgba(0, 0, 0, 0.2);
-  background-color: var(--main-white) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+    width: 100%;
+    
+    overflow: hidden;
+    padding: 20px 40px;
+    transition: all 0.3s ease;
+    border-radius: 14px;
+    border: 3px solid var(--text-main);
+    box-shadow: 5px 10px 24px rgba(0, 0, 0, 0.2);
+    background-color: var(--main-white) !important;
 }
 
 .package-card .number {
@@ -217,10 +217,11 @@ h3 {
 #about .dev-profile {
     display: flex;
     flex-direction: row;
-    justify-content: center; 
+    justify-content: space-between; 
     align-items: center;            
     max-width: 80%;              
     margin: 0 auto;
+    gap: 30px;
 }
 
 .dev-profile .about-text {                 
