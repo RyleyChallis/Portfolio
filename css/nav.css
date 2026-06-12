@@ -100,13 +100,13 @@ nav .logo img {
     display: flex;
     flex-direction: column;
     flex-grow: 1 !important;
+    justify-content: flex-start !important;
     align-items: flex-start;
 
     padding: 0 20px 0 32px;
     margin: 0;
-    gap: 12px;
 
-    overflow-y: auto;
+    overflow: hidden;
     z-index: 1000;
     max-width: 90% !important;
 }
@@ -131,7 +131,10 @@ nav .logo img {
 
     color: var(--text-main);
     text-decoration: none;
-    padding: 0px 8px 0px 9px !important;
+    padding: 16px 0 !important;
+    text-align: left; 
+    
+    width: 100%;
     display: block;
     transition: all 0.3s ease;
     border-radius: 7px;
@@ -141,22 +144,36 @@ nav .logo img {
     font-family: var(--ff-header);
     font-size: var(--fs-h4);
     font-weight: 500;
-
+    width: 100%;
     color: var(--text-main);
     text-decoration: none;
-    padding: 0px 8px 0px 6px !important;
+    
+    padding: 16px 20px; 
+    
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    gap: 12px; 
+    
     border-radius: 7px;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Crucial to keep width at 100% with padding */
+}
+
+.dropdown-btn:hover {
+    background-color: #efefef;
 }
 
 .sidebar a:hover {
     background-color: #efefef;
+    
 }
 
 .sidebar .odd-link {
-    margin: 0 !important;
-    padding: 0 !important; 
-    gap: 0 !important;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
 }
 
 .sidebar span i {
@@ -169,13 +186,17 @@ nav .logo img {
 
 .sidebar .closebtn {
     display: flex;
-    padding: 20px;
+    padding: 12px 20px !important;
     cursor: pointer;
     border: none;
     background: transparent;
 
-    margin-left: auto;
+    font-size: var(--fs-h3);
+
+    margin-left: auto !important;
     margin-bottom: auto;
+    margin-right: 20px;
+    width: fit-content !important;
 }
 
 .openbtn {
@@ -250,7 +271,7 @@ nav .logo img {
 }
 
 .dropdown-btn {
-    padding: 8px 8px 8px 0;
+    padding: 0 !important;
     text-decoration: none;
     font-size: 1.1rem;
     color: var(--text-main);
@@ -266,6 +287,12 @@ nav .logo img {
     cursor: pointer;
     font-family: var(--ff-body);
     transition: 0.3s;
+}
+
+.sidebar .arrow-trigger {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .arrow-trigger i {
@@ -308,17 +335,7 @@ nav .logo img {
     max-height: 300px;
     opacity: 1;
     visibility: visible;
-    margin-bottom: 20px;
-}
-
-.arrow {
-    transition: all 0.3s ease;
-    font-size: 20px;
-}
-
-.dropdown-btn.active .arrow {
-    transform: rotate(90deg);
-    display: inline-block;
+    padding-bottom: 20px;
 }
 
 .sidebar .btn-primary {
