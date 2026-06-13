@@ -429,7 +429,7 @@ footer .footer-container {
     display: flex;
     flex-direction: column;
 
-    gap: 18px;
+    gap: 12px;
     margin: 0;
     padding: 0;
     list-style: none;
