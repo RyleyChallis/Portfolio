@@ -63,7 +63,7 @@ nav .btn-primary:hover {
 
 .nav-links-second .cta-two:hover {
     box-shadow: 0 5px 0 0 var(--text-main);
-    filter: brightness(95%) !important;
+    filter: brightness(95%);
 }
 
 .btn-secondary {
