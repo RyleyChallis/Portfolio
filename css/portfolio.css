@@ -60,7 +60,6 @@ p {
     font-size: var(--ff-body);
     font-family: var(--ff-body);
     color: var(--text-main);
-    max-width: 750px;
     margin: 0;
     line-height: 1.6;
 }
@@ -128,8 +127,9 @@ p {
 #gallery p {
     text-align: center;
     padding-bottom: 75px;
+    padding-top: 0 !important;
     max-width: 950px;
-    margin: 30px auto 0 auto;
+    margin: 0 auto;
 }
 
 #gallery p.mobile-only {
@@ -257,9 +257,9 @@ p {
 }
 
 .lead {
-    text-align: left;
+    text-align: center;
     margin: 0 auto;
-    padding-top: 0;
+    padding-top: 20px !important;
     padding-bottom: 75px;
 }
 

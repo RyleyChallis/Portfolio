@@ -37,9 +37,9 @@ function openNav() {
     
     const overlay = document.getElementById("sidebarOverlay");
     overlay.style.opacity = "1";
-    overlay.style.pointerEvents = "auto"; 
+    overlay.style.pointerEvents = "auto";
     
-    document.body.style.overflow = "hidden"; 
+    document.body.style.overflowY = "hidden"; 
     document.body.style.userSelect = "none";
 }
 

@@ -11,6 +11,7 @@
     font-family: var(--ff-body);
     font-weight: 500;
 
+    display: inline-block;
     transition: all 0.2s ease;
     cursor: pointer;
     white-space: nowrap !important;
@@ -39,15 +40,6 @@ nav .btn-primary:hover {
 
 .package-card .btn-primary:hover {
     filter: brightness(90%);
-}
-
-#packages .learn-more-btn {
-    width: fit-content;
-    margin: 0 auto;
-}
-
-#about .btn-primary {
-    margin: 75px 0;
 }
 
 .nav-links-second .cta-two {
