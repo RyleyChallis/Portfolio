@@ -21,7 +21,8 @@ html, body {
     --main-yellow: #faef1a;
     --main-white: #faf8f8;
     --off-white: #f5f0f0;
-    --text-main: #333;
+    --header-main: #333;
+    --text-main: #535353;
 
     --fs-h1: clamp(2.4rem, 6vw, 3.5rem);
     --fs-h2: clamp(2rem, 4vw, 2.4rem);
@@ -43,7 +44,7 @@ h2 {
     font-size: var(--fs-h2);
     font-family: var(--ff-header);
     font-weight: 700;
-    color: var(--text-main);
+    color: var(--header-main);
     text-align: center;
     padding: 75px 0;
     margin: 0 auto !important;
@@ -53,7 +54,7 @@ h3 {
     font-size: var(--fs-h3);
     font-family: var(--ff-header);
     font-weight: 500;
-    color: var(--text-main);
+    color: var(--header-main);
     margin: 0;
 }
 
@@ -96,7 +97,7 @@ p {
     font-size: var(--fs-h1);
     font-family: var(--ff-header);
     font-weight: bold;
-    color: var(--text-main);
+    color: var(--header-main);
     max-width: clamp(0, 90vw, 90%);
     margin: 0;
 }
@@ -201,12 +202,10 @@ p {
     left: 0;
     width: 100% !important;
     height: 100% !important;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
     border-radius: 7px;
     
     display: flex !important;
-    align-items: center;
-    justify-content: center;
     
     opacity: 0;
     transition: opacity 0.3s ease;
