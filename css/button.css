@@ -80,3 +80,9 @@ nav .btn-primary:hover {
 .btn-secondary i {
     margin-left: 10px;
 }
+
+#final .btn-primary {
+    display: flex !important;
+    max-width: fit-content;
+    margin: 0 auto !important;
+}
