@@ -42,7 +42,7 @@ section:nth-child(even) {
 h2 {
     font-size: var(--fs-h2);
     font-family: var(--ff-header);
-    font-weight: bold;
+    font-weight: 700;
     color: var(--text-main);
     text-align: center;
     padding: 75px 0;
@@ -52,6 +52,7 @@ h2 {
 h3 {
     font-size: var(--fs-h3);
     font-family: var(--ff-header);
+    font-weight: 500;
     color: var(--text-main);
     margin: 0;
 }
